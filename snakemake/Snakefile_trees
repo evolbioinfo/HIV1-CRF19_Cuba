@@ -1,0 +1,189 @@
+import os
+# To run locally:
+# snakemake --snakefile Snakefile_trees --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+
+# To visualise the pipeline:
+# snakemake --snakefile Snakefile_trees --dag --config folder='..' | dot -Tsvg > pipeline_trees.svg
+
+localrules: all
+ruleorder: cut > nex2nwk > date_lsd2 > root > raxml
+
+folder = os.path.abspath(config["folder"])
+data_dir = os.path.join(folder, 'data')
+subtypes = ['A1', 'G', 'D']
+
+rule all:
+    input:
+        expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.nwk'), subtype=subtypes)
+
+rule raxml:
+    '''
+    Reconstructs a tree with RAxML.
+    '''
+    input:
+        aln = os.path.join(data_dir, 'datasets', '{subtype}', 'aln.first.cleaned.fa')
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.nwk'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.log'),
+    threads: 12
+    singularity: "docker://evolbioinfo/raxml-ng:v0.9.0"
+    params:
+        mem = 10000,
+        name = 'raxml_{subtype}',
+        qos = 'normal'
+    shell:
+        """
+        n=`grep '>' {input.aln}  | wc -l`
+        if (($n > 500))
+        then
+            tree="pars{{1}}"
+        else
+            tree="pars{{5}}"
+        fi
+
+        raxml-ng --model GTR+G6+FO+IO --msa {input.aln} --msa-format FASTA --data-type DNA \
+        --seed 239 --threads {threads} --force --tree $tree
+        cp {input.aln}.raxml.bestTree {output.tree}
+        cp {input.aln}.raxml.log {output.log}
+        rm -rf {input.aln}.raxml.*
+        """
+
+rule root:
+    '''
+    Roots a tree with an outgroup.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.nwk'),
+        outgroup = os.path.join(data_dir, 'datasets', '{subtype}', 'outgroup.txt'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
+    singularity:
+        "docker://evolbioinfo/gotree:v0.3.0b"
+    params:
+        mem = 2000,
+        name = 'root_{subtype}',
+        qos = 'fast'
+    threads: 1
+    shell:
+        """
+        gotree support clear -i {input.tree} | gotree reroot outgroup -l {input.outgroup} -o {output.tree} -r
+        """
+
+rule extract_dates_lsd2:
+    '''
+    Reformats metadata into date file readable by LSD.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
+        tab = os.path.join(data_dir, 'datasets', 'metadata.tab'),
+    output:
+        tab = os.path.join(data_dir, 'datasets', '{subtype}', 'lsd2.dates'),
+    params:
+        mem = 1000,
+        name = 'lsd2_dates_{subtype}',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/extract_dates_lsd.py --data {input.tab} --dates {output.tab} \
+        --date_col "sample_date" --diag_col 'diagnostics_date' --tree {input.tree}
+        """
+
+rule aln_length:
+    '''
+    Calculates alignment length.
+    '''
+    input:
+        aln = os.path.join(data_dir, 'datasets', '{subtype}', '{aln}.fa'),
+    output:
+        length = os.path.join(data_dir, 'datasets', '{subtype}', '{aln}.length'),
+    singularity:
+        "docker://evolbioinfo/goalign:v0.3.1"
+    params:
+        mem = 2000,
+        name = 'aln_len_{subtype}',
+        qos = 'fast'
+    threads: 1
+    shell:
+        """
+        goalign stats length -i {input.aln} > {output.length}
+        """
+
+rule date_lsd2:
+    '''
+    Dates a tree.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
+        length = os.path.join(data_dir, 'datasets', '{subtype}', 'aln.first.cleaned.length'),
+        dates = os.path.join(data_dir, 'datasets', '{subtype}', 'lsd2.dates'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.nexus'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.log'),
+        rd = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.rootdate'),
+    threads: 1
+    singularity: "docker://evolbioinfo/lsd2:v1.4.2.2"
+    params:
+        mem = 4000,
+        name = 'lsd2_{subtype}',
+        wd = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.wd'),
+        qos = 'fast'
+    shell:
+        """
+        n=`head {input.length}`
+
+        lsd2 -i {input.tree} -d {input.dates} -v 2 -c -s $n -f 1000 -o {params.wd} -e 3 > {output.log}
+
+        mv "{params.wd}.date.nexus" "{output.tree}"
+        rm "{params.wd}"
+        rm "{params.wd}.nexus"
+
+
+        echo `grep "], tMRCA" {output.log} | sed -e 's/rate [0-9\\.]\\+ \\[[0-9\\.]\\+; [0-9\\.]\\+\\], tMRCA //g' \
+        | sed -e 's/ \\[[0-9\\.]\\+; [0-9\\.]\\+\\], objective function [0-9\\.]\\+//g'` > {output.rd}
+        """
+
+rule nex2nwk:
+    '''
+    Converts a nexus tree to newick.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', '{tree}.nexus'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', '{tree}.nwk'),
+    singularity:
+        "docker://evolbioinfo/gotree:v0.3.0b"
+    params:
+        mem = 2000,
+        name = 'nex2nwk_{subtype}',
+        qos = 'fast'
+    threads: 1
+    shell:
+        """
+        gotree reformat newick -i {input.tree} -f nexus -o {output.tree}
+        sed -i -e 's/\\[[^]]*\\]//g' {output.tree}
+        """
+
+rule cut:
+    '''
+    Cuts tree branches at diagnostic.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.nwk'),
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.cut.nwk'),
+    threads: 1
+    params:
+        mem = 500,
+        name='cut_{subtype}',
+        sampling = 'sample_date',
+        diagnostics = 'diagnostics_date',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/cut_tree.py --in_tree {input.tree} --data {input.data} \
+        --out_tree {output.tree} --date_col_tip "{params.sampling}" --date_col_cut "{params.diagnostics}"
+        """

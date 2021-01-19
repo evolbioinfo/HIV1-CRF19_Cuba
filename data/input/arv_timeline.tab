@@ -1,0 +1,12 @@
+year	drug abbreviation	comment	ARV type
+1987	AZT	AZT monotherapy for AIDS	first-line
+1996	3TC	Government purchase of AZT, 3TC, SQV (Saquinavir) for HIV-positive women and infants at US$ 14 000 ppy. AZT produced on small scale; HAART recommended treatment of choice	first-line
+1996	SQV	Government purchase of AZT, 3TC, SQV (Saquinavir) for HIV-positive women and infants at US$ 14 000 ppy. AZT produced on small scale; HAART recommended treatment of choice
+2001	DDI	AZT, DDI, D4T, 3TC, DDC, IDV locally produced. April 2001 National Treatment Protocol with generic medications established; roll out of universal HAART begins	first-line
+2001	D4T	AZT, DDI, D4T, 3TC, DDC, IDV locally produced. April 2001 National Treatment Protocol with generic medications established; roll out of universal HAART begins	first-line
+2001	DDC	AZT, DDI, D4T, 3TC, DDC, IDV locally produced. April 2001 National Treatment Protocol with generic medications established; roll out of universal HAART begins
+2001	IDV	AZT, DDI, D4T, 3TC, DDC, IDV locally produced. April 2001 National Treatment Protocol with generic medications established; roll out of universal HAART begins	first-line
+2003	NVP	100% HAART coverage achieved; NVP, NFV, ABC, EFV production in pipeline	second-line if TB
+2003	NFV	100% HAART coverage achieved; NVP, NFV, ABC, EFV production in pipeline	second-line if TB
+2003	ABC	100% HAART coverage achieved; NVP, NFV, ABC, EFV production in pipeline
+2003	EFV	100% HAART coverage achieved; NVP, NFV, ABC, EFV production in pipeline

@@ -1,0 +1,340 @@
+import os
+
+# To run locally:
+# snakemake --snakefile Snakefile_datasets --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+
+# To visualise the pipeline:
+# snakemake --snakefile Snakefile_datasets --dag --config folder='..' | dot -Tsvg > pipeline_datasets.svg
+
+localrules: all
+
+folder = os.path.abspath(config["folder"])
+data_dir = os.path.join(folder, 'data')
+subtypes = ['A1', 'G', 'D']
+
+rule all:
+    input:
+        expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'aln.first.cleaned.fa'), subtype=subtypes),
+        os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drms.tab'),
+
+
+rule jphmm_reference:
+    '''Transforms an official LA alignment into a reference file for jpHMM'''
+    input:
+        fa = os.path.join(data_dir, 'input', 'HIV1_ALL_2018_genome_DNA.fasta')
+    output:
+        fa = os.path.join(data_dir, 'input', 'jpHMM_files','HIV1_ALL_2018_genome_DNA.fasta'),
+    params:
+        mem = 2000,
+        name = 'jphmm_ref',
+        qos = 'fast',
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/la_genome_jphmm_formatter.py --in_aln "{input.fa}" --out_aln {output.fa}
+        """
+
+rule aln_la:
+    '''Corrects LA sequence names.'''
+    input:
+        fa = os.path.join(data_dir, 'input', 'HIV1_ALL_2018_genome_DNA.fasta')
+    output:
+        fa = os.path.join(data_dir, 'datasets', 'aln.genome.la.fa'),
+    params:
+        mem = 2000,
+        name = 'aln_genome_la',
+        qos = 'fast',
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/la_sequence_parser.py --in_aln "{input.fa}" --out_aln {output.fa}
+        """
+
+rule subtype:
+    '''Subtypes sequences with jpHMM'''
+    input:
+        fa = os.path.join(data_dir, 'datasets', 'sequences.{gene}.{type}.fa'),
+        emission_priors = os.path.join(data_dir, 'input', 'jpHMM_files', 'priors', 'emissionPriors_HIV.txt'),
+        transition_priors = os.path.join(data_dir, 'input', 'jpHMM_files', 'priors', 'transition_priors.txt'),
+        aln = os.path.join(data_dir, 'input', 'jpHMM_files','HIV1_ALL_2018_genome_DNA.fasta'),
+    output:
+        msa = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', '{type}', 'alignment_to_msa.txt'),
+        rec = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', '{type}', 'recombination.txt')
+    params:
+        mem = 10000,
+        name = 'subtype_{gene}.{type}',
+        output_dir = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', '{type}'),
+        qos = 'normal'
+    threads: 1
+    singularity: "docker://evolbioinfo/jphmm:v03.2015"
+    shell:
+        """
+        mkdir -p {params.output_dir}
+        jpHMM -s {input.fa} -a {input.emission_priors} -b {input.transition_priors} -i {input.aln} -v HIV -o {params.output_dir}
+        """
+
+rule aln_genome:
+    '''Aligns sequences with jpHMM'''
+    input:
+        fa = os.path.join(data_dir, 'datasets', 'sequences.{gene}.{type}.fa'),
+        msa = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', '{type}', 'alignment_to_msa.txt'),
+        length = os.path.join(data_dir, 'input', 'HIV1_ALL_2018_genome_DNA.length'),
+    output:
+        aln = os.path.join(data_dir, 'datasets', 'aln.{gene}.{type}.fa'),
+    params:
+        mem = 10000,
+        name = 'aln_genome_{gene}.{type}',
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/jphmm_aligner.py --in_fa {input.fa} --in_msa {input.msa} --out_aln {output.aln} \
+        --aln_len `head -n 1 {input.length}`
+        """
+
+rule aln_length:
+    '''
+    Calculates alignment length.
+    '''
+    input:
+        aln = os.path.join(data_dir, '{prefix}.fasta'),
+    output:
+        length = os.path.join(data_dir, '{prefix}.length'),
+    singularity:
+        "docker://evolbioinfo/goalign:v0.3.1"
+    params:
+        mem = 2000,
+        name = 'aln_len',
+    threads: 1
+    shell:
+        """
+        goalign stats length -i {input.aln} > {output.length}
+        """
+
+rule aln_rm_gaps:
+    '''
+    Remove all-gappy positions from the alignment.
+    '''
+    input:
+        aln = os.path.join(data_dir, '{prefix}.fa'),
+    output:
+        aln = os.path.join(data_dir, '{prefix}.cleaned.fa'),
+    singularity:
+        "docker://evolbioinfo/goalign:v0.3.1"
+    params:
+        mem = 2000,
+        name = 'aln_rm_gaps',
+    threads: 1
+    shell:
+        """
+        goalign clean sites -c 1 -i {input.aln} > {output.aln}
+        """
+
+rule crf19_breakpoints:
+    '''
+    Calculates alignment length.
+    '''
+    input:
+        aln = os.path.join(data_dir, 'input', 'HIV1_ALL_2018_genome_DNA.fasta'),
+    output:
+        log = os.path.join(data_dir, 'CRF_19.breakpoints'),
+    params:
+        mem = 2000,
+        name = 'crf19_breakpoints'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/crf_19_breakpoints.py --in_aln {input.aln} --out_log {output.log}
+        """
+
+rule metadata_la:
+    '''Extracts LA metadata.'''
+    input:
+        aln = os.path.join(data_dir, 'input', 'HIV1_ALL_2018_genome_DNA.fasta')
+    output:
+        data = os.path.join(data_dir, 'datasets', 'metadata.genome.la.tab'),
+    params:
+        mem = 2000,
+        name = 'metadata_genome_la',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/la_genome_metadata_parser.py --in_aln "{input.aln}"  --out_data {output.data} \
+        --no_loc_info --any_subtype
+        """
+
+rule metadata_subtyped_cu:
+    '''Adds jpHMM subtype to metadata.'''
+    input:
+        data = os.path.join(data_dir, 'datasets', 'md.{gene}.cu.tab'),
+        bp = os.path.join(data_dir, 'CRF_19.breakpoints'),
+        msa = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', 'cu', 'alignment_to_msa.txt'),
+        rec = os.path.join(data_dir, 'datasets', 'jpHMM_output', '{gene}', 'cu', 'recombination.txt')
+    output:
+        data = os.path.join(data_dir, 'datasets', 'metadata.{gene}.cu.tab')
+    params:
+        mem = 2000,
+        name = 'metadata_subtyped_{gene}',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/add_jphmm_subtype.py --in_data "{input.data}" --out_data {output.data} \
+        --crf19_breakpoints {input.bp} --in_msa {input.msa} --in_rec {input.rec}
+        """
+
+rule combine_cu:
+    '''Combines CU pol and env aln and metadata.'''
+    input:
+        aln = expand(os.path.join(data_dir, 'datasets', 'aln.{gene}.cu.fa'), gene=['pol', 'env']),
+        tab = expand(os.path.join(data_dir, 'datasets', 'metadata.{gene}.cu.tab'), gene=['pol', 'env']),
+    output:
+        aln = os.path.join(data_dir, 'datasets', 'aln.cu.fa'),
+        tab = os.path.join(data_dir, 'datasets', 'metadata.cu.tab'),
+    params:
+        mem = 2000,
+        name = 'combine_cu',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/aln_combiner.py --in_aln {input.aln} --out_aln {output.aln} \
+        --in_data {input.tab} --out_data {output.tab}
+        """
+
+rule aln_fragment:
+    '''Extracts the fragment of interest from alignment.'''
+    input:
+        aln = os.path.join(data_dir, 'datasets', 'aln.fa'),
+        tab = os.path.join(data_dir, 'datasets', 'metadata.tab'),
+        bp = os.path.join(data_dir, 'CRF_19.breakpoints'),
+    output:
+        fa = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'aln.fa'),
+        outgroup = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'outgroup.txt')
+    params:
+        mem = 2000,
+        name = 'aln_fragment_la_{subtype}',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/aln_cutter.py --in_aln "{input.aln}" --ingroup "{wildcards.subtype}" \
+        --out_aln {output.fa} --out_outgroup {output.outgroup} --crf19_breakpoints {input.bp} --in_data {input.tab}
+        """
+
+rule aln_concat:
+    '''Concats alignments.'''
+    input:
+        aln_cu = os.path.join(data_dir, 'datasets', 'aln.cu.fa'),
+        aln_la = os.path.join(data_dir, 'datasets', 'aln.genome.la.fa')
+    output:
+        aln = os.path.join(data_dir, 'datasets', 'aln.fa')
+    params:
+        mem = 2000,
+        name = 'aln_concat',
+        qos = 'fast'
+    threads: 1
+    shell:
+        """
+        cat {input.aln_cu}  <(echo) {input.aln_la} > {output.aln}
+        """
+
+rule metadata:
+    '''
+    Combines metadata.
+    '''
+    input:
+        data_cu = os.path.join(data_dir, 'datasets', 'metadata.cu.tab'),
+        data_la = os.path.join(data_dir, 'datasets', 'metadata.genome.la.tab'),
+    output:
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+    params:
+        mem = 2000,
+        name = 'metadata',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/merge_metadata.py --data {input.data_cu} {input.data_la} --output_data {output.data}
+        """
+
+rule drm_data:
+    '''
+    Extracts information about DRMs from Stanford DB (with sierra) and reformat it into a table.
+    '''
+    input:
+        fasta = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'aln.fa'),
+    output:
+        tab = temp(os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drms.temp.tab'))
+    params:
+        mem = 2000,
+        name = 'metadata_drms',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/sdrmhunter:v0.2.1.3"
+    shell:
+        """
+        if [ -e {output.tab}.backup ]
+        then
+            cp {output.tab}.backup {output.tab}
+        else
+            export LC_ALL=C.UTF-8
+            export LANG=C.UTF-8
+            sdrmhunter --fasta {input.fasta} --output {output.tab}
+            cp {output.tab} {output.tab}.backup
+        fi
+        """
+
+rule arv_data:
+    '''
+    Extracts information about DRMs from Stanford DB (with sierra) and reformat it into a table.
+    '''
+    input:
+        tab = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drms.temp.tab'),
+        drug_timeline = os.path.join(data_dir, 'input', 'arv_timeline.tab'),
+    output:
+        tab = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drms.tab'),
+        drug_tab = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drugs.tab')
+    params:
+        mem = 2000,
+        name = 'metadata_drms',
+        qos = 'fast'
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6richer.1"
+    shell:
+        """
+        python3 py/drug_metadata.py --input_tab {input.tab} --output_tab {output.tab} \
+        --output_drug_tab {output.drug_tab} --timeline {input.drug_timeline}
+        """
+
+rule first_sample:
+    '''
+    Prunes extra samples from the alignment.
+    '''
+    input:
+        aln = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'aln.fa'),
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab'),
+    output:
+        aln = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'aln.first.fa'),
+    threads: 1
+    params:
+        mem = 500,
+        name='first_patient_{subtype}',
+        sampling = 'sample_date',
+        patient_col = 'patient_id',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/filter_by_patient.py --in_aln {input.aln} --data {input.data} \
+        --out_aln {output.aln} --date_col "{params.sampling}" --patient_col "{params.patient_col}"
+        """

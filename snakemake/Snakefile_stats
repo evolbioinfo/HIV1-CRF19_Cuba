@@ -1,0 +1,187 @@
+import os
+
+# To run locally:
+# snakemake --snakefile Snakefile_stats --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+
+# To visualise the pipeline:
+# snakemake --snakefile Snakefile_stats --dag --config folder='..' | dot -Tsvg > pipeline_stats.svg
+
+localrules: all
+
+
+folder = os.path.abspath(config["folder"])
+data_dir = os.path.join(folder, 'data')
+
+# SDRMs to be analysed: all with prevalence > 10% for any subtype
+DRMs = ['RT_M41L', 'RT_T215Y', 'RT_K101E', 'RT_K219E', 'RT_K103N', 'RT_G190A', 'RT_D67N', 'RT_Y181C', 'RT_M184V']
+
+locs = ['country', 'intregion', 'subregion', 'location']
+subtypes = ['A1', 'G', 'D']
+
+
+rule all:
+    input:
+        stats = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'drm_stats.tab'),
+        gender_stats = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'transitions.sexuality_gender.log'),
+        #
+        crf_19_date = os.path.join(data_dir, 'datasets', 'dates_CRF_19.tab'),
+        crf_19_locs = os.path.join(data_dir, 'datasets', 'locs_CRF_19.tab'),
+        #
+        itols = expand(os.path.join(data_dir, 'datasets', 'iTOL', 'iTOL_colorstrip-gender.txt'), subtype=subtypes),
+
+
+rule stats:
+    '''
+    Calculates stats for ACR.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.diag.nwk'),
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', 'all', 'combined_ancestral_states.tab')
+    output:
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'drm_stats.tab'),
+    threads: 1
+    params:
+        mem = 500,
+        name='stats_{subtype}',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    shell:
+        """
+        python3 py/drm_stats.py --input_acr {input.data} --output_tab {output.data} \
+        --input_tree {input.tree}
+        """
+
+
+rule extract_crf19_loc:
+    '''
+    Extracts the location and CI of CRF_19's ancestor node.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.diag.nwk'),
+        data = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'pastml', 'all', 'combined_ancestral_states.tab'),
+        tab = os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'ids_CRF_19.tab'),
+    output:
+        tab = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'locs_CRF_19.tab'),
+    threads: 1
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    params:
+        mem = 4000,
+        name = 'loc_CRF_19',
+    shell:
+        """
+        python3 py/format_loc.py --ids {input.tab} --loc "{output.tab}" \
+        --nwk "{input.tree}" --label "LA+CU" --subtype "{wildcards.subtype}+CRF_19" --acr {input.data}
+        """
+
+rule combine_crf_19_locs:
+    '''
+    Combines the locations of CRF_19's ancestor.
+    '''
+    input:
+        tabs = expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'locs_CRF_19.tab'), subtype=subtypes),
+    output:
+        tab = os.path.join(data_dir, 'datasets', 'locs_CRF_19.tab'),
+    threads: 1
+    params:
+        mem = 4000,
+        name = 'loc_CRF_19',
+    shell:
+        """
+        f=`ls {input.tabs} | head -n 1`
+        line=`head -n 1 $f`
+        echo "$line" >> "{output.tab}"
+
+        for f in {input.tabs}
+        do
+            echo "\n" >> "{output.tab}"
+            line=`head -n 2 $f | tail -n 1`
+            echo "$line" >> "{output.tab}"
+        done
+        sed -i '/^$/d' "{output.tab}"
+        """
+
+rule itol_annotations:
+    '''
+    Extracts itol metadata
+    '''
+    input:
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+    output:
+        os.path.join(data_dir, 'datasets', 'iTOL', 'iTOL_colorstrip-gender.txt'),
+        os.path.join(data_dir, 'datasets', 'iTOL', 'iTOL_colorstrip-treated.txt'),
+    singularity:
+        "docker://evolbioinfo/table2itol:latest"
+    params:
+        mem = 2000,
+        name = 'itol',
+        wd = os.path.join(data_dir, 'datasets', 'iTOL')
+    threads: 1
+    shell:
+        """
+        table2itol.R -i "id" {input.data} -D {params.wd}
+        """
+
+rule pastml_transitions_with_gender:
+    '''
+    Visualising transition counts with PastML.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'pastml', 'sexuality', 'named.tree_timetree.diag.nwk'),
+        data = os.path.join(data_dir, 'datasets', 'metadata.diag.tab'),
+    output:
+        log = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'transitions.sexuality_gender.log'),
+    threads: 1
+    params:
+        mem = 4000,
+        name = 'transitions_sexuality_gender',
+        qos = 'fast'
+    shell:
+        """
+        python3 py/count_transitions.py --tree {input.tree} --data {input.data} \
+        --log {output.log}
+        """
+
+
+rule extract_crf19_date_subtype:
+    '''
+    Extracts the date and CI of CRF_19.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.nexus'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.log'),
+        ids = os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'ids_CRF_19.tab'),
+    output:
+        tab = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'date_CRF_19.tab'),
+    threads: 1
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    params:
+        mem = 4000,
+        name = 'date_CRF_19_lsd2_{subtype}',
+    shell:
+        """
+        python3 py/format_dates_lsd2.py --ids {input.ids} --dates "{output.tab}" \
+        --nexus "{input.tree}" --label 'LA+CU' --subtype "{wildcards.subtype}+CRF_19" --log {input.log}
+        """
+
+rule combine_crf_19_dates:
+    '''
+    Combines the dates and CIs of CRF_19, estimated on trees with different dating.
+    '''
+    input:
+        tabs = expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'date_CRF_19.tab'), subtype=subtypes),
+    output:
+        tab = os.path.join(data_dir, 'datasets', 'dates_CRF_19.tab'),
+    threads: 1
+    params:
+        mem = 4000,
+        name = 'dates_CRF_19',
+    shell:
+        """
+        echo "data set\tsubtype\tCRF_19 MRCA date [CI]\tnon-CRF_19 MRCA date [CI]\trate\n" > "{output.tab}"
+        for f in {input.tabs}
+        do
+            echo "\n" >> "{output.tab}"
+            cat $f >> "{output.tab}"
+        done
+        sed -i '/^$/d' "{output.tab}"
+        """

@@ -1,0 +1,240 @@
+import os
+
+# To run locally:
+# snakemake --snakefile Snakefile_acr --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+
+# To visualise the pipeline:
+# snakemake --snakefile Snakefile_acr --dag --config folder='..' | dot -Tsvg > pipeline_acr.svg
+
+localrules: all
+ruleorder: pastml_vis > pastml_drm > pastml_col
+
+folder = os.path.abspath(config["folder"])
+data_dir = os.path.join(folder, 'data')
+
+# SDRMs to be analysed: all with prevalence > 10%
+DRMs = ['RT_M41L', 'RT_T215Y', 'RT_K101E', 'RT_K219E', 'RT_K103N', 'RT_G190A', 'RT_D67N', 'RT_Y181C', 'RT_M184V']
+
+locs = ['country', 'intregion', 'subregion', 'location']
+cuban_columns = ['sexuality', 'province_of_diagnostics']
+subtypes = ['A1', 'G', 'D']
+
+
+rule all:
+    input:
+        acrs = expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'acr', 'map.{col}.{subtype}_CRF_19.html'), col=locs, subtype=subtypes),
+        acrs_crf_19 = expand(os.path.join(data_dir, 'datasets', 'CRF_19_D', 'acr', 'map.{col}.CRF_19_D.html'), col=cuban_columns + DRMs),
+        ids = expand(os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'ids_CRF_19.tab'), subtype=['A1', 'D', 'G']),
+
+
+rule collapse:
+    '''
+    Collapses branches using a certain criterion.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.named.nwk'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.collapsed.nwk'),
+    threads: 1
+    params:
+        mem = 500,
+        name='collapse_{subtype}',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/collapse.py --input_tree {input.tree} --feature dist \
+        --output_tree {output.tree} --threshold 0
+        """
+
+rule name:
+    '''
+    Names a tree.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.nwk'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.named.nwk'),
+    threads: 1
+    params:
+        mem = 500,
+        name='name_{subtype}',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    shell:
+        """
+        python3 py/name_tree.py --input_tree {input.tree} --output_tree {output.tree}
+        """
+
+rule mark_diagnostics_tree:
+    '''
+    Marks diagnostics moments on the tree as additional nodes.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.collapsed.nwk'),
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+    output:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.diag.nwk'),
+    threads: 1
+    params:
+        mem = 500,
+        name='diagnostics_{subtype}',
+        sampling = 'sample_date',
+        diagnostics = 'diagnostics_date',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/mark_tree.py --in_tree {input.tree} --data {input.data} \
+        --out_tree {output.tree} --date_col_tip "{params.sampling}" --date_col_cut "{params.diagnostics}"
+        """
+
+rule mark_diagnostics_metadata:
+    '''
+    Marks diagnostics moments on the tree as additional nodes.
+    '''
+    input:
+        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+    output:
+        data = os.path.join(data_dir, 'datasets', 'metadata.diag.tab')
+    threads: 1
+    params:
+        mem = 500,
+        name='diagnostics',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/python-evol:v3.6"
+    shell:
+        """
+        python3 py/diagnostics_metadata.py --in_data {input.data} --out_data {output.data}
+        """
+
+rule crf_19_subtree:
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.diag.nwk'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.rootdate'),
+        data = os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'pastml', 'subtype', 'combined_ancestral_states.tab'),
+    output:
+        tree = os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'timetree.diag.nwk'),
+        ids = os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'ids_CRF_19.tab'),
+        log = os.path.join(data_dir, 'datasets', 'CRF_19_{subtype}', 'timetree.rootdate'),
+    threads: 1
+    params:
+        mem = 500,
+        name='subtree_CRF_19_{subtype}',
+        qos = 'fast'
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    shell:
+        """
+        date=`head {input.log}`
+
+        python3 py/subtree.py --acr {input.data} --output_tree {output.tree} --input_tree {input.tree} \
+        --value CRF_19 --root_date $date --output_log {output.log} --ids {output.ids}
+        """
+
+rule crf_19_drm_metadata_D:
+    input:
+        metadata_drugs = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drugs.tab'),
+        metadata_acr = os.path.join(data_dir, 'datasets', 'D_CRF_19', 'metadata.drms.tab'),
+    output:
+        metadata_drugs = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'metadata.drugs.tab'),
+        metadata_acr = os.path.join(data_dir, 'datasets', 'CRF_19_D', 'metadata.drms.tab'),
+    threads: 1
+    params:
+        mem = 500,
+        name='metadata_CRF_19_D',
+        qos = 'fast'
+    shell:
+        """
+        cp {input.metadata_acr} {output.metadata_acr}
+        cp {input.metadata_drugs} {output.metadata_drugs}
+        """
+
+rule pastml_drm:
+    '''
+    Cuts a tree based on date of the first drug than could inflict the DRM of interest.
+    Then reconstructs ancestral states on the forest and combines them with all-sensitive reconstruction for the root subtree.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.diag.nwk'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.rootdate'),
+        arv_data = os.path.join(data_dir, 'datasets', '{subtype}', 'metadata.drugs.tab'),
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'metadata.drms.tab'),
+    output:
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{drm,((RT|PR)_[A-Z][0-9]+[A-Za-z]+)|([A-Z0-9][A-Z0-9][A-Z0-9])}', 'combined_ancestral_states.tab'),
+    threads: 1
+    params:
+        mem = 500,
+        name='pastml_{subtype}.{drm}_acr',
+        qos = 'fast',
+        wd = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{drm}'),
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    shell:
+        """
+        date=`head {input.log}`
+
+        forest="{input.tree}.forest_{wildcards.drm}.nwk"
+
+        python3 py/cut_by_date.py --input_tree {input.tree} --arv_tab {input.arv_data} \
+        --output_forest $forest --root_date $date --arv {wildcards.drm}
+
+        pastml --tree $forest --data {input.data} -v --work_dir "{params.wd}" --columns "{wildcards.drm}"
+
+        mv "{params.wd}/combined_ancestral_states.tab" "{params.wd}/combined_ancestral_states.forest.tab"
+
+        rm $forest
+
+        python3 py/drm_metadata.py --input_tree {input.tree} --input_tab {input.data} \
+        --input_acr "{params.wd}/combined_ancestral_states.forest.tab" \
+        --output_tab {output.data} --arv_tab {input.arv_data} --root_date $date --arv {wildcards.drm}
+        """
+
+rule pastml_vis:
+    '''
+    Visualisation with PastML.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.diag.nwk'),
+        log = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.rootdate'),
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{col}', 'combined_ancestral_states.tab'),
+    output:
+        map = os.path.join(data_dir, 'datasets', '{subtype}', 'acr', 'map.{col}.{subtype}.html'),
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'acr', 'tree.{col}.{subtype}.html'),
+    threads: 2
+    singularity: "docker://evolbioinfo/pastml:v1.9.20"
+    params:
+        mem = 4000,
+        name = 'pastml_{subtype}.{col}_vis',
+        wd = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{col}.copy'),
+        qos = 'fast'
+    shell:
+        """
+        date=`head {input.log}`
+
+        pastml --tree {input.tree} --data {input.data} -v --work_dir "{params.wd}" --html_compressed "{output.map}" \
+        --prediction_method COPY --tip_size_threshold 20 --root_date $date  --html "{output.tree}"
+
+        rm -rf "{params.wd}"
+        """
+
+rule pastml_col:
+    '''
+    ACR with PastML.
+    '''
+    input:
+        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.diag.nwk'),
+        data = os.path.join(data_dir, 'datasets', 'metadata.diag.tab'),
+    output:
+        data = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{col}', 'combined_ancestral_states.tab'),
+        params = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{col}', 'params.character_{col}.method_MPPA.model_F81.tab')
+    threads: 2
+    singularity: "docker://evolbioinfo/pastml:v1.9.30"
+    params:
+        mem = 4000,
+        name = 'pastml_{subtype}.{col}_arc_{subtype}',
+        wd = os.path.join(data_dir, 'datasets', '{subtype}', 'pastml', '{col}'),
+        qos = 'normal'
+    shell:
+        """
+        pastml --tree {input.tree} --data {input.data} --columns "{wildcards.col}" -v --work_dir "{params.wd}"
+        """
+
