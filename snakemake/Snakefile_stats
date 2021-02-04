@@ -6,7 +6,7 @@ import os
 # To visualise the pipeline:
 # snakemake --snakefile Snakefile_stats --dag --config folder='..' | dot -Tsvg > pipeline_stats.svg
 
-localrules: all
+localrules: all, itol_annotations
 
 
 folder = os.path.abspath(config["folder"])
