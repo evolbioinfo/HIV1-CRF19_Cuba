@@ -15,9 +15,9 @@ for reconstruction of evolutionary history of HIV-1 in Cuba:
 ## Data
 * [*data/input*](data/input) folder contains the input curated 2018 HIV-1 alignment from [Los Alamos database](https://www.hiv.lanl.gov/content/sequence/NEWALIGN/align.html),
 and the input files for [jpHMM](http://jphmm.gobics.de/).
-* [*data/metadata.tab*](data/metadata.tab) contains the combined metadata for CU and LA sequences used for these analyses (produced with [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
-* [*data/D_CRF_19/aln.first.cleaned.fa*](data/D_CRF_19/aln.first.cleaned.fa), 
-[*data/A1_CRF_19/aln.first.cleaned.fa*](data/A1_CRF_19/aln.first.cleaned.fa), 
-[*data/G_CRF_19/aln.first.cleaned.fa*](data/G_CRF_19/aln.first.cleaned.fa) contain the combined CU+LA MSAs (including 5 outgroup sequences indicated in outgroup.txt files in the corresponding folders) for the D/A1/G data sets used for these analyses (produced with [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
-* [*data/D_CRF_19/metadata.drms.tab*](data/D_CRF_19/metadata.drms.tab), [*data/D_CRF_19/metadata.drugs.tab*](data/D_CRF_19/metadata.drugs.tab) contain the Surveillance DRM and ARV metadata for the D+CRF_19 sequences 
+* [*data/datasets/metadata.tab*](data/datasets/metadata.tab) contains the combined metadata for CU and LA sequences used for these analyses (produced with [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
+* [*data/datasets/D_CRF_19/aln.first.cleaned.fa*](data/datasets/D_CRF_19/aln.first.cleaned.fa), 
+[*data/datasets/A1_CRF_19/aln.first.cleaned.fa*](data/datasets/A1_CRF_19/aln.first.cleaned.fa), 
+[*data/datasets/G_CRF_19/aln.first.cleaned.fa*](data/datasets/G_CRF_19/aln.first.cleaned.fa) contain the combined CU+LA MSAs (including 5 outgroup sequences indicated in outgroup.txt files in the corresponding folders) for the D/A1/G data sets used for these analyses (produced with [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
+* [*data/datasets/D_CRF_19/metadata.drms.tab*](data/datasets/D_CRF_19/metadata.drms.tab), [*data/datasets/D_CRF_19/metadata.drugs.tab*](data/datasets/D_CRF_19/metadata.drugs.tab) contain the Surveillance DRM and ARV metadata for the D+CRF_19 sequences 
 extracted with [Sierra](https://hivdb.stanford.edu/page/webservice/) (see [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
