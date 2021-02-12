@@ -1,0 +1,691 @@
+id	sample_date	gender	sexuality	diagnostics_date	province_of_diagnostics	treated	subtype	country_code	subtype_preannotated	subtype_jpHMM	CRF_19_compatible	country	region	subregion	intregion
+AB098331					abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AB098333	1992.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AB253421	1992.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+AB253429	1992.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AB287004	2003.0				abroad		G	GH				Ghana	Africa	Sub-Saharan Africa	Western Africa
+AB287376	1992.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+AB287379	1993.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+AB485632					abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AB485648	1990.0				abroad		D	SN				Senegal	Africa	Sub-Saharan Africa	Western Africa
+AB485650	1991.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF004885	1994.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF061641	1993.0				abroad		G	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF061642	1993.0				abroad		G	SE				Sweden	Europe	Europe	Northern Europe
+AF069669	1995.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+AF069670	1994.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+AF069671	1994.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+AF069673	1995.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+AF084936	1996.0				abroad		G	BE				Belgium	Europe	Europe	Western Europe
+AF107771	1995.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+AF361872	1997.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+AF361873	1997.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+AF413987	2000.0				abroad		A6	UA				Ukraine	Europe	Europe	Eastern Europe
+AF450098	1999.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+AF457052	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457053	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457055	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457063	1999.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457065	1999.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457066	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457067	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457068	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457069	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457070	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457075	1999.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457077	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457079	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457080	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457081	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457083	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457084	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457086	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457089	2000.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF457090	2001.0				abroad		D	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AF484477	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484478	1999.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484480	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484481	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484483	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484485	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484486	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484489	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484490	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484493	1999.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484494	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484495	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484497	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484498	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484499	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484502	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484505	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484506	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484507	1998.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484508	1998.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484509	1998.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484511	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484512	1998.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484513	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484514	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484515	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484516	1998.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484518	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF484519	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AF539405	1986.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AIDS-RP1	2007-11-01 00:00:00	F	HT	2006-11-07 00:00:00	Camaguey	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP11	2008-04-08 00:00:00	M	MSM	2006-07-11 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP14	2008-04-30 00:00:00	M	MSM	2005-08-02 00:00:00	Cienfuegos	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP2	2007-11-07 00:00:00	M	MSM	2007-06-19 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP28	2009-02-12 00:00:00	M	HT	2007-05-05 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP29	2009-02-12 00:00:00	M	MSM	2009-10-06 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP46	2011-02-02 00:00:00	M	MSM	2010-11-02 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AIDS-RP7	2008-01-15 00:00:00	M	MSM	2005-12-13 00:00:00	Villa Clara	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AJ320484	1992.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AJ488926	1999.0				abroad		D	TD				Chad	Africa	Sub-Saharan Africa	Middle Africa
+AJ488927	1999.0				abroad		D	TD				Chad	Africa	Sub-Saharan Africa	Middle Africa
+AR6	30/7/2013	F	HT	23/4/2013	Artemisa	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AR7	20/6/2013	M	HT	2013-04-23 00:00:00	Artemisa	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+AY253305	2001.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+AY253311	2001.0				abroad		D	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+AY253314	2001.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+AY304496	1999.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AY322185	1997.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AY322189	1997.0				abroad		D	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AY322190	1997.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AY322193	1997.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+AY371121	2001.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+AY371155	2001.0				abroad		D	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+AY371156	2001.0				abroad		D	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+AY371157	2001.0				abroad		D	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+AY586547	1999.0						G	CU				Cuba	Cuba	Cuba	Cuba
+AY586548	1999.0						G	CU				Cuba	Cuba	Cuba	Cuba
+AY586549	1999.0						G	CU				Cuba	Cuba	Cuba	Cuba
+AY588970	1999.0						CRF_19	CU				Cuba	Cuba	Cuba	Cuba
+AY588971	1999.0						CRF_19	CU				Cuba	Cuba	Cuba	Cuba
+AY612637					abroad		G	PT				Portugal	Europe	Europe	Southern Europe
+AY713406	1993.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+AY713418	1993.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+AY772535	1996.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+AY773338	1984.0				abroad		D	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+AY773340	1985.0				abroad		D	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+AY773341	1986.0				abroad		D	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+AY795903	2001.0				abroad		D	YE				Yemen	Asia	Asia	Western Asia
+AY795907	2002.0				abroad		D	YE				Yemen	Asia	Asia	Western Asia
+AY894994	1999.0						CRF_19	CU				Cuba	Cuba	Cuba	Cuba
+CA1	2013-04-10 00:00:00	M	HT	15/7/2013	Ciego de Avila	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CA26	18/10/2013	M	MSM	27/9/2013	Ciego de Avila	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_006	2003-05-04 00:00:00	M	MSM	1998-02-03 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_025	2003-06-04 00:00:00	M	MSM	2001-11-27 00:00:00	Sancti Spiritus	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_029	2003-05-04 00:00:00	M	MSM	1997-09-02 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_095	2003-05-04 00:00:00	M	MSM	1997-11-18 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_137	2003-05-25 00:00:00	M	MSM	2001-10-16 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_168	2003-05-04 00:00:00	M	MSM	1996-11-26 00:00:00	Cienfuegos	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_242	2003-08-04 00:00:00	M	MSM	2003-03-18 00:00:00	Ciego de Avila	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_260	2003-05-12 00:00:00	M	MSM	2000-08-01 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_293	2003-06-04 00:00:00	M	MSM	2002-03-05 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_300	2003-08-04 00:00:00	F	HT	2003-01-28 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_302	2003-08-04 00:00:00	M	MSM	2002-12-31 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_303	2003-05-12 00:00:00	M	MSM	1999-07-06 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_383	2003-06-04 00:00:00	M	MSM	2003-11-25 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_389	2003-05-12 00:00:00	F	HT	1999-07-20 00:00:00	Pinar del Rio	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_432	2003-04-02 00:00:00	M	HT	1988-10-15 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_518	2003-08-04 00:00:00	F	HT	2003-04-15 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_521	2003-04-14 00:00:00	F	HT	1995-12-20 00:00:00	Pinar del Rio	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_560	2003-05-25 00:00:00	M	MSM	2001-03-20 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_566	2003-05-12 00:00:00	M	MSM	1998-10-06 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_578	2003-05-25 00:00:00	M	MSM	2000-12-26 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_595	2003-05-12 00:00:00	M	MSM	2000-09-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_658	2003-05-12 00:00:00	M	MSM	1999-03-02 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CB_699	2003-04-14 00:00:00	F	HT	1995-06-15 00:00:00	Villa Clara	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-101-17							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU-1165-17	2017-03-14 00:00:00	M	MSM	2014-11-04 00:00:00	Mayabeque	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1426-17	2017-03-30 00:00:00	M	MSM	1993-09-23 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1492-17	2017-04-04 00:00:00	M	MSM	2015-07-07 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1493-17	2017-04-04 00:00:00	F	HT	2001-11-06 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-167-18	2018-01-17 00:00:00	F	HT	2017-02-21 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1714-17	2017-04-17 00:00:00	M	MSM	2015-11-17 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1734-17	2017-04-18 00:00:00	M	Bisexual	2014-09-23 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-1880-17	2017-04-26 00:00:00	F	HT	2012-10-09 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-2614-17	2017-06-07 00:00:00	F	HT	2005-04-05 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-2648-17	2017-06-09 00:00:00	M	MSM	1997-04-01 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3020-17	2017-06-30 00:00:00	M	MSM	2005-04-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3024-18	2018-07-10 00:00:00	M	MSM	2006-06-06 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3111-17	2017-07-07 00:00:00	M		2015-03-24 00:00:00	Ciego de Avila	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3164-18	2018-07-18 00:00:00	M	Bisexual	2018-06-26 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3250-17	2017-07-14 00:00:00	M		2004-03-30 00:00:00	Santiago de Cuba	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3309-17	2017-07-17 00:00:00	F	HT	2017-07-25 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3457-17	2017-08-02 00:00:00	F	HT	2017-08-15 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3524-17	2017-08-08 00:00:00	F	HT	2004-10-12 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-3623-18	2018-08-24 00:00:00	M	MSM	2012-07-17 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-399-17	2017-01-25 00:00:00	M	MSM	2005-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-4290-17	2017-10-05 00:00:00	M	MSM	2013-02-12 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU-490-16							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU-575-17	2017-02-07 00:00:00	M	MSM	2004-12-30 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU020-19	2018-08-16 00:00:00	M	MSM	2018-08-21 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU055-19	2018-10-19 00:00:00	M	MSM	2016-10-25 00:00:00	Mayabeque	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU058-19	2016-11-08 00:00:00	M	HT	2016-11-15 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU060-19	2016-08-11 00:00:00	M	HT	2016-11-22 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU064-19	2017-07-02 00:00:00	F	HT	2017-02-07 00:00:00	La Habana	naive	A1	CU	CRF_18	A1	True	Cuba	Cuba	Cuba	Cuba
+CU069-19	2016-12-01 00:00:00	M	MSM	01/11/2016 	Santiago de Cuba	naive	A1	CU	CRF_18	A1	True	Cuba	Cuba	Cuba	Cuba
+CU072-19	2017-07-02 00:00:00	M	MSM	2016-10-11 00:00:00	La Habana	naive	A1	CU	CRF_18	A1	True	Cuba	Cuba	Cuba	Cuba
+CU076-19	2016-07-20 00:00:00	M	MSM	2016-07-19 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU096-19	2018-11-20 00:00:00	M	MSM	2010-11-30 00:00:00	La Habana	treated	A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CU1035-12	2012-04-17 00:00:00	M	MSM	2008-04-01 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU108-16	2016-01-13 00:00:00	M		2015-03-17 00:00:00	Cienfuegos	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1080-11	2011-05-25 00:00:00	F	HT	2008-06-24 00:00:00	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1089_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU1104-16	2016-03-30 00:00:00	F	HT	2013-10-29 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU111-19	2018-09-07 00:00:00	F	HT	2018-09-11 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1139-11	2011-06-07 00:00:00	M	MSM	2004-08-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1141-11	2011-06-07 00:00:00	M	MSM	2010-12-07 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1144-11	2011-06-07 00:00:00	M	MSM	2004-01-27 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1155-14	2014-04-09 00:00:00	M	MSM	1993-02-05 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1159-12	2012-04-25 00:00:00	F	HT	2000-04-18 00:00:00	Guantanamo	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU116-10	2010-02-01 00:00:00	M	MSM	1998-02-24 00:00:00	Sancti Spiritus	treated	D	CU	D	D	True	Cuba	Cuba	Cuba	Cuba
+CU1162-09	2009-06-17 00:00:00	M	MSM	2000-09-12 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU117-10	2010-02-01 00:00:00	M	MSM	1994-02-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1180-12	2012-05-02 00:00:00	M	MSM	2011-11-01 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1202-17	2017-03-15 00:00:00	M	MSM	2009-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1209-09	2009-06-24 00:00:00	M	MSM	2002-03-19 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU121-14	2014-01-24 00:00:00	M	MSM	2011-05-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1241-12	2012-05-08 00:00:00	M	MSM	2012-04-10 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1264-11	2011-06-17 00:00:00	M	MSM	2011-05-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1267-09	2009-07-01 00:00:00	M	MSM	2006-09-12 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1269-09	2009-07-03 00:00:00	F	HT	1996-06-05 00:00:00	Holguin	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1270-09	2009-07-03 00:00:00	M	MSM	1996-06-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1270-12	2012-05-09 00:00:00	M	MSM	2009-04-21 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1272-12	2012-05-09 00:00:00	M	MSM	2008-02-19 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1273-12	2012-05-09 00:00:00	M	MSM	2011-04-26 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1273_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU1283-09	2009-07-06 00:00:00	M	MSM	2006-10-24 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1354-12	2012-05-15 00:00:00	M	MSM	2011-04-10 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1367-12	2012-05-15 00:00:00	F	HT	2004-08-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1370-12	2012-05-15 00:00:00	M	HT	2010-08-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1376-11	2011-07-01 00:00:00	F	HT	2000-09-27 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1394_16	2016-04-19 00:00:00	M	MSM	2016-05-31 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1397-13	2013-05-15 00:00:00	M	MSM	2010-11-16 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1416-11	2011-07-07 00:00:00	M	MSM	2011-08-09 00:00:00	Artemisa	naive	D	CU	CRF, B	D	True	Cuba	Cuba	Cuba	Cuba
+CU1437-17	2017-03-31 00:00:00	F	HT			treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU145-12	2012-01-24 00:00:00	M	MSM	2012-01-31 00:00:00	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1452-12	2012-05-22 00:00:00	F	HT	2002-11-12 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1456-11	2011-07-13 00:00:00	M	MSM	1997-02-04 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1483-09	2009-08-07 00:00:00	M	MSM	1998-07-07 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1484-09	2009-08-10 00:00:00	M	MSM	1999-03-30 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1492-12	2012-05-28 00:00:00	M	MSM	2009-03-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1495_16	2016-04-26 00:00:00	M	MSM	2002-12-03 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1496-13	2013-05-22 00:00:00	M	MSM	2012-12-31 00:00:00	Guantanamo	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1497-09	2009-08-12 00:00:00	M	MSM	1996-12-17 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1499-18	2018-04-12 00:00:00	M	MSM	2014-09-09 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU150-14	2014-01-24 00:00:00	F	HT	1991-06-11 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1528-2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU1528_15	2015-05-07 00:00:00	M	MSM	2008-05-13 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1567-13	2013-05-27 00:00:00	F	HT	1997-02-11 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1609_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU1627-09	2009-09-04 00:00:00	M	MSM	2001-07-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1640-09	2009-09-07 00:00:00	M	MSM	1997-08-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1664-12	2012-06-12 00:00:00	M	MSM	2011-02-01 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1665-12	2012-06-12 00:00:00	M	HT	1992-06-10 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1683-16	2016-05-09 00:00:00	M	MSM	1997-07-01 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1683_16	2016-05-09 00:00:00	M	MSM	1997-07-01 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1685_16	2016-05-10 00:00:00	F	HT	2014-11-11 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1708-09	2009-09-17 00:00:00	M	MSM	1999-06-22 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1760_16	2016-05-11 00:00:00	M	HT	2013-10-22 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1761-16	2016-05-11 00:00:00	F	HT	2016-05-17 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1761_16	2016-05-11 00:00:00	F	HT	2016-05-17 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU1794-14	2014-05-21 00:00:00	F	HT	2006-04-11 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1805-09	2009-10-05 00:00:00	M	MSM	1994-07-13 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1806-09	2009-10-05 00:00:00	M	MSM	2003-06-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1882-13	2013-06-19 00:00:00	M	MSM	1999-11-02 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1892-09	2009-10-13 00:00:00	M	MSM	2002-02-26 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1895-09	2009-10-13 00:00:00	M	MSM	2002-12-17 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1898-16	2016-05-20 00:00:00	M		2006-11-07 00:00:00	La Habana	treated	D	CU	CRF, 19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1906-11	2011-09-15 00:00:00	M	MSM	2009-12-01 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1908_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU1922-13	2013-06-19 00:00:00	M	MSM	2000-12-12 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1925-13	2013-06-20 00:00:00	F	HT	1988-03-19 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1937-11	2011-09-20 00:00:00	M	MSM	2001-05-29 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU194-11	2011-01-24 00:00:00	M	HT	2010-12-07 00:00:00	Las Tunas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1952-13	2013-06-24 00:00:00	M	MSM	2008-10-14 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1955-11	2011-09-20 00:00:00	M	MSM	2003-06-03 00:00:00	Matanzas	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1959-09	2009-10-22 00:00:00	M	MSM	2000-03-21 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1968-13	2013-06-24 00:00:00	M	MSM	2013-04-23 00:00:00	Cienfuegos	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1975-11	2011-09-21 00:00:00	M	HT	2003-06-24 00:00:00	Camaguey	treated	D	CU	D	D	True	Cuba	Cuba	Cuba	Cuba
+CU1982-12	2012-07-11 00:00:00	M	MSM	2011-11-15 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU1998-10	2010-12-09 00:00:00	M	MSM	2010-04-20 00:00:00	Camaguey	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2015-09	2009-10-28 00:00:00	M	MSM	2009-06-02 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU203-14	2014-01-29 00:00:00	M	MSM	2007-02-13 00:00:00	Santiago de Cuba	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2043-09	2009-11-02 00:00:00	M	MSM	2006-02-07 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2056-11	2011-09-29 00:00:00	M	MSM	2006-05-02 00:00:00	Granma	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2086-10	2010-12-22 00:00:00	M	MSM	2009-06-16 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2102-09	2009-11-11 00:00:00	M	MSM	2009-09-15 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2135_16	2016-06-07 00:00:00	F	HT	2015-12-08 00:00:00		treated	CRF_19	CU	CRF_19	A1,D	True	Cuba	Cuba	Cuba	Cuba
+CU213_16	2016-01-19 00:00:00	M	MSM	2004-08-03 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU2170-12	2012-07-30 00:00:00	M	MSM	2009-11-10 00:00:00	Pinar del Rio	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2170-13	2013-06-18 00:00:00	M	MSM	2013-02-26 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2171-13	2013-06-18 00:00:00	M	MSM	2013-02-19 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2173-13	2013-06-18 00:00:00	M	Bisexual	2013-01-15 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2182-09	2009-11-20 00:00:00	M	MSM	2005-02-15 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2197-17	2017-05-16 00:00:00	M	MSM	1998-04-28 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2209-11	2011-10-14 00:00:00	M	MSM	1997-10-06 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2226-11	2011-10-18 00:00:00	M	MSM	2005-04-26 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2241_16	2016-06-15 00:00:00	M	MSM	2007-11-20 00:00:00		treated	CRF_19	CU	CRF_19	A1,D	True	Cuba	Cuba	Cuba	Cuba
+CU225-12	2012-01-31 00:00:00	M	MSM	2005-11-22 00:00:00	Granma	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU225-18	2018-01-23 00:00:00	F	HT	2015-12-08 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2281-16	2016-06-10 00:00:00	F	HT	2008-08-19 00:00:00	Cienfuegos	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU229-12	2012-01-31 00:00:00	M	MSM	1999-03-30 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2291-17	2017-05-22 00:00:00	M		2006-09-05 00:00:00	Guantanamo	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2297-12	2012-08-08 00:00:00	M	MSM	2004-03-09 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2302-2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU2303_15	2015-07-09 00:00:00	M	MSM				CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU2304_15	2015-07-09 00:00:00	F	HT	1998-03-10 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU2304_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU2316-11	2011-10-25 00:00:00	M	MSM	2000-12-31 00:00:00	Villa Clara	treated	D	CU	CRF, B	D	True	Cuba	Cuba	Cuba	Cuba
+CU2319-17	2017-05-23 00:00:00	M	HT	2013-10-15 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2325-18	2018-05-30 00:00:00	M	HT	2017-02-14 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU233-17	2017-01-18 00:00:00	F	HT	2007-05-05 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2364-11	2011-10-26 00:00:00	M	MSM	2010-11-30 00:00:00	Sancti Spiritus	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2406-11	2011-11-01 00:00:00	M	MSM	2005-05-10 00:00:00	La Habana	treated	D	CU	D	D	True	Cuba	Cuba	Cuba	Cuba
+CU2410-2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU2421-17	2017-05-29 00:00:00	F	HT	2013-08-20 00:00:00	Granma	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2451_16	2016-06-28 00:00:00	F	HT	2014-07-22 00:00:00		treated	A1,B,G	CU	CRF_19	A1,B,G	False	Cuba	Cuba	Cuba	Cuba
+CU2452-18	2018-06-06 00:00:00	M	HT	1990-07-17 00:00:00	La Habana	treated	A1,A3	CU	A1	A1,A3	False	Cuba	Cuba	Cuba	Cuba
+CU2456-11	2011-11-07 00:00:00	M	MSM	2010-09-14 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2456-16	2016-06-29 00:00:00	M	MSM	2011-03-01 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2479-17	2017-05-31 00:00:00	M	MSM	2008-02-19 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2483-11	2011-11-08 00:00:00	M	MSM	2006-04-18 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2492_16	2016-06-29 00:00:00	M	MSM	2000-02-22 00:00:00		treated	A1,F1,G	CU	CRF_18	A1,F1,G	False	Cuba	Cuba	Cuba	Cuba
+CU2644_16							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU2647_15	2015-08-10 00:00:00	F	HT	2008-12-16 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU2669-11	2011-11-23 00:00:00	F	HT	2011-03-22 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2677_16	2016-07-14 00:00:00	M	MSM	2002-12-31 00:00:00		treated	CRF_19	CU	CRF_19	A1,D	True	Cuba	Cuba	Cuba	Cuba
+CU2711-12	2012-09-19 00:00:00	M	MSM	2001-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2796-13	2013-09-19 00:00:00	M	MSM	2012-08-07 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2798-13	2013-09-19 00:00:00	M	MSM	2008-09-23 00:00:00	Ciego de Avila	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2800-11	2011-12-06 00:00:00	F	HT	1993-11-11 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2804-11	2011-12-07 00:00:00	M	MSM	2011-04-05 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2816-18	2018-06-28 00:00:00	F	HT	1990-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2826-11	2011-12-09 00:00:00	M	MSM	2004-07-20 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2864-11	2011-12-13 00:00:00	M	MSM	2006-10-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2865-11	2011-12-13 00:00:00	M	MSM	1998-09-29 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2887-12	2012-10-03 00:00:00	M	Bisexual	2012-08-28 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2890-18	2018-07-02 00:00:00	M	MSM	2018-01-30 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2936-17	2017-06-27 00:00:00	F	HT	2012-01-24 00:00:00	Sancti Spiritus	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2938-17	2017-06-27 00:00:00	M	MSM	2003-01-28 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2947-11	2011-12-20 00:00:00	F	HT	1988-05-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU297-12	2012-02-07 00:00:00	M	MSM	2008-06-10 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2988-16	2016-08-10 00:00:00	F		2016-03-08 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU2988_16	2016-08-10 00:00:00	F	HT	2016-03-15 00:00:00		naive	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU3002-11	2011-12-28 00:00:00	M	HT	2004-06-22 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3002-17	2017-06-29 00:00:00	M		2005-12-06 00:00:00	Las Tunas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3004-11	2011-12-28 00:00:00	M	MSM	2011-10-04 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3042-12	2012-10-16 00:00:00	M	MSM	2008-07-15 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3069-13	2013-10-21 00:00:00	M	MSM	2002-12-24 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3134-13	2013-10-25 00:00:00	M	MSM	2009-10-20 00:00:00	Cienfuegos	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU322-11	2011-02-03 00:00:00	M	MSM	2001-10-09 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3264-17	2017-07-14 00:00:00	M	MSM	2010-10-05 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3277-13	2013-11-07 00:00:00	F	HT	2001-04-03 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU330-13	2013-02-13 00:00:00	F	HT	2000-07-11 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3325-12	2012-11-09 00:00:00	M	MSM	1991-01-21 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3356-12	2012-11-14 00:00:00	F	HT	2012-02-14 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3357-12	2012-11-13 00:00:00	M	MSM	2000-09-27 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3419-13	2013-11-05 00:00:00	M	MSM	2012-07-24 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3420-13	2013-11-05 00:00:00	M	MSM	2013-01-15 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3434-12	2012-11-20 00:00:00	M	MSM	1999-06-29 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU345-10	2010-03-26 00:00:00	F	HT	1996-12-24 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU357-11	2011-02-11 00:00:00	M	MSM	2001-03-27 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3726-16	2016-10-12 00:00:00	M	MSM	2006-04-18 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU378-2018							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU380-12	2012-02-14 00:00:00	M	MSM	2000-07-04 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU386-12	2012-02-15 00:00:00	F	HT	1998-03-10 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3866-16	2016-10-20 00:00:00	M	MSM	1998-11-17 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3866_16	2016-10-20 00:00:00	M	MSM	1998-11-17 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU3915-16	2016-10-25 00:00:00	M		2006-05-23 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3915_16	2016-10-25 00:00:00	M	MSM	2006-05-23 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU3922-17	2017-09-08 00:00:00	M	MSM	2006-01-17 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU393-13	2013-02-20 00:00:00	M	MSM	2012-04-17 00:00:00	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU3949_16	2015-12-01 00:00:00	M	MSM	2008-01-29 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU40-12	2012-01-10 00:00:00	M	MSM	1998-03-10 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU403-10	2010-04-12 00:00:00	M	MSM	2006-01-24 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU4035-16	2016-11-02 00:00:00	M	MSM	2007-06-12 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU4087-16	2016-11-04 00:00:00	M	MSM	2013-10-08 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU422-11	2011-02-22 00:00:00	M	MSM	2006-09-19 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU426_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU427-2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU442-12	2012-02-21 00:00:00	M	MSM	2008-04-08 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU443-12	2012-02-21 00:00:00	F	HT	2000-08-08 00:00:00	La Habana	treated	D	CU	D	D	True	Cuba	Cuba	Cuba	Cuba
+CU444-11	2011-02-23 00:00:00	M	MSM	2005-03-15 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU445-12	2012-02-21 00:00:00	M	MSM	2008-12-09 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU4485-18	2018-10-17 00:00:00	M	MSM	2004-08-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU45-12	2012-01-10 00:00:00	M	MSM	2005-05-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU461-09	2009-03-09 00:00:00	M	MSM	1998-12-31 00:00:00	Artemisa	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU47-12	2012-01-10 00:00:00	M	MSM	2006-04-18 00:00:00	La Habana	treated	D	CU	CRF, B	D	True	Cuba	Cuba	Cuba	Cuba
+CU4739-18	2018-11-01 00:00:00	F	HT	2004-10-12 00:00:00	Villa Clara	treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU4764-17	2017-11-01 00:00:00	M	MSM	2015-01-20 00:00:00	Guantanamo	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU4973-17	2017-11-13 00:00:00	F	HT	2017-01-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU503-10	2010-05-06 00:00:00	F	HT	1991-10-09 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU505-13	2013-02-27 00:00:00	M	MSM	2011-12-20 00:00:00	Ciego de Avila	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU5309-17	2017-12-04 00:00:00	M	MSM	2002-04-16 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU54-11	2011-01-11 00:00:00	F	HT	1995-08-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU546-11	2011-03-07 00:00:00	M	MSM	2011-03-29 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU547-11	2011-03-07 00:00:00	F	HT	2010-12-21 00:00:00	Mayabeque	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU547_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU5657-2017							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU578-12	2012-03-06 00:00:00	M	MSM	2006-11-21 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU57_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU582_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU585_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU58_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU609-13	2013-03-08 00:00:00	M	Bisexual	2002-11-26 00:00:00	Holguin	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU612-13	2013-03-11 00:00:00	M	MSM	2012-09-04 00:00:00	Mayabeque	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU614-13	2013-03-11 00:00:00	M	MSM	2006-02-28 00:00:00	Matanzas	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU615-13	2013-03-11 00:00:00	M	MSM	2011-08-09 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU623_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU626_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU627_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU630-13	2013-03-11 00:00:00	M	MSM	2010-08-24 00:00:00	Mayabeque	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU631-13	2013-03-11 00:00:00	M	MSM	2010-08-24 00:00:00	Mayabeque	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU645-09	2009-04-03 00:00:00	M	MSM	2005-10-04 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU646-09	2009-04-03 00:00:00	M	MSM	2001-02-20 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU662_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU668-12	2012-03-14 00:00:00	F	HT	2011-08-09 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU699-12	2012-03-13 00:00:00	M	MSM	2001-12-04 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU705-12	2012-03-16 00:00:00	F	HT	1997-08-26 00:00:00	Matanzas	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU712-13	2013-03-18 00:00:00	M	MSM	1999-10-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU736-10	2010-06-22 00:00:00	M	MSM	2004-12-14 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU749-09	2009-04-15 00:00:00	M	MSM	2000-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU756-13	2013-03-23 00:00:00	F	HT	2013-02-12 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU783-12	2012-03-22 00:00:00	M	MSM	2005-05-31 00:00:00	Pinar del Rio	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU816-12	2012-03-27 00:00:00	M	MSM	2007-10-19 00:00:00	La Habana	naive	D	CU	D	D	True	Cuba	Cuba	Cuba	Cuba
+CU821_16	2016-03-01 00:00:00	M	MSM	2000-11-21 00:00:00		treated	CRF_19	CU	CRF_19	A1	True	Cuba	Cuba	Cuba	Cuba
+CU845-09	2009-04-24 00:00:00	M	MSM	2002-12-03 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU850-14	2014-03-20 00:00:00	M	MSM	2013-07-09 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU850-17	2017-02-24 00:00:00	M	MSM	2010-12-31 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU881-11	2011-04-26 00:00:00	M	MSM	1998-05-12 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU893-17	2017-02-27 00:00:00	M	MSM	1999-08-17 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU90-10	2010-01-25 00:00:00	M	MSM	1994-02-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU908-13	2013-04-02 00:00:00	M	MSM	2013-01-15 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU939-11	2011-05-05 00:00:00	M	MSM	2008-01-29 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU949-09	2009-05-14 00:00:00	M	MSM	2002-12-24 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU961-12	2012-04-10 00:00:00	M	MSM	2010-12-14 00:00:00	La Habana	treated	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+CU977_2015							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CU981_14							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+CUNT13							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUNT14							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUNT16							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUT12							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUT15							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUT21							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUT22							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+CUT4							A1	CU		A1	True	Cuba	Cuba	Cuba	Cuba
+Chronic-AIDS7	2008-05-29 00:00:00	M	HT	2003-09-09 00:00:00	La Habana	naive	D	CU	CRF, F1	D	True	Cuba	Cuba	Cuba	Cuba
+DQ168573	2001.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+DQ168575	2001.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+DQ168576	2001.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+DQ168579	2001.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+DQ396400	2004.0				abroad		A	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+DQ676872	2003.0				abroad		A1	AU				Australia	Oceania	Australia and New Zealand	Australia
+EF633445	1990.0				abroad		D	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+EU110088	2001.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+EU110092	2002.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+EU110094	2002.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+EU110095	2001.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+EU786670	2005.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+FJ388893	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388903	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388909	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388925	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388938	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388942	2005.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388943	2006.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+FJ388945	2006.0				abroad		D	CY				Cyprus	Asia	Asia	Western Asia
+FJ389363	2004.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+FJ389364	2004.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+FJ389365	2004.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+FJ389366	2004.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+FJ389367	2001.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+FJ623475	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623476	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623477	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623478	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623479	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623480	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623481	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623482	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623483	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623485	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623486	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623487	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ623488	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+FJ670519	2005.0				abroad		A1	ES				Spain	Europe	Europe	Southern Europe
+FJ670523	2006.0				abroad		A1	ES				Spain	Europe	Europe	Southern Europe
+FJ670530	2008.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+FR846408					abroad		G	PT				Portugal	Europe	Europe	Southern Europe
+FR846409					abroad		G	PT				Portugal	Europe	Europe	Southern Europe
+FR846410					abroad		G	PT				Portugal	Europe	Europe	Southern Europe
+GM11	21/6/2013	M	MSM	2013-05-07 00:00:00	Guantanamo	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+GU362882	2009.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+HO114	2014-05-03 00:00:00	M	MSM	28/1/2014	Holguin	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+HO2	17/4/2013	M	HT	2013-09-04 00:00:00	Holguin	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+IJ2							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+JF683759	2007.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF683760	2007.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF683767	2008.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF683779	2008.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF683782	2008.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF683783	2008.0				abroad		A1	CY				Cyprus	Asia	Asia	Western Asia
+JF932485	2007.0				abroad		B	CN				China	Asia	Asia	Eastern Asia
+JN106043	2008.0				abroad		G	CN				China	Asia	Asia	Eastern Asia
+JN248582	2008.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+JN248584	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+JN248586	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+JN248591	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+JN248593	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+JQ403079	2007.0				abroad		D	US				United States of America	Americas	Northern America	Northern America
+JX140670	2010.0				abroad		D	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+JX140676	2010.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+JX236668	2005.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236669	2007.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236670	2007.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236671	2007.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236672	2008.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236673	2007.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236676	2007.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236677	2007.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236678	2007.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+JX236679	2007.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+K03454	1983.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KF716472	2011.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+KF716474	2011.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KF716475	2011.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KF716476	2011.0				abroad		D	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KF716477	2009.0				abroad		G	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KF716478	2009.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KF716479	2010.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KF716480	2011.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KF716486	2011.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KF859745	2011.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KJ787683	2010.0				abroad		D	BR				Brazil	Americas	South America	South America
+KJ787684	2010.0				abroad		D	BR				Brazil	Americas	South America	South America
+KJ948658	2000.0				abroad		A1	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+KJ948662	2001.0				abroad		G	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+KP109490	2009.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+KP109502	2010.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KP718915	2006.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KP718918	2007.0				abroad		A1	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KP718923	2007.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KP718925	2008.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KP718928	2008.0				abroad		A1	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KR017776	2007.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KT022360	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022361	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022363	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022364	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022365	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022367	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022368	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022369	2004.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022370	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022372	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022373	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022374	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022375	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022376	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022377	2005.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022378	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022379	2006.0				abroad		G	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022380	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022381	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022382	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT022383	2006.0				abroad		A1	KE				Kenya	Africa	Sub-Saharan Africa	Eastern Africa
+KT124805	2009.0				abroad		B	DE				Germany	Europe	Europe	Western Europe
+KT152839	2009.0				abroad		A1	IN				India	Asia	Asia	Southern Asia
+KT152840	1997.0				abroad		A1	IN				India	Asia	Asia	Southern Asia
+KT152841	1999.0				abroad		A1	IN				India	Asia	Asia	Southern Asia
+KT152844	1999.0				abroad		A1	IN				India	Asia	Asia	Southern Asia
+KT152846	2000.0				abroad		A1	IN				India	Asia	Asia	Southern Asia
+KT183312	2004.0				abroad		A1	ZA				South Africa	Africa	Sub-Saharan Africa	Southern Africa
+KT276261	2014.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+KT427673	2010.0				abroad		B	BR				Brazil	Americas	South America	South America
+KT427815	2010.0				abroad		B	BR				Brazil	Americas	South America	South America
+KU168256	2002.0				abroad		A1	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KU168271	2003.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KU168272	2002.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KU168277	2003.0				abroad		G	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KU168278	2003.0						G								
+KU168300	2008.0				abroad		G	GW				Guinea-Bissau	Africa	Sub-Saharan Africa	Western Africa
+KU168302	2003.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KU168305	2003.0				abroad		A1	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KU685581	2014.0				abroad		CRF_19	ES				Spain	Europe	Europe	Southern Europe
+KU685582	2014.0				abroad		CRF_19	ES				Spain	Europe	Europe	Southern Europe
+KU685592	2014.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+KU749399	2011.0				abroad		A6	UA				Ukraine	Europe	Europe	Eastern Europe
+KU749402	2012.0				abroad		A6	UA				Ukraine	Europe	Europe	Eastern Europe
+KU749407	2012.0				abroad		A6	UA				Ukraine	Europe	Europe	Eastern Europe
+KU749411	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KU749423	2006.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+KU749424	2008.0				abroad		A1	RW				Rwanda	Africa	Sub-Saharan Africa	Eastern Africa
+KX232594	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232595	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232597	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232600	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232607	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232609	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232610	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232611	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232613	2014.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232614	2015.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232618	2015.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232620	2015.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232624	2015.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX232626	2015.0				abroad		A1	PK				Pakistan	Asia	Asia	Southern Asia
+KX389615	2010.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389618	2010.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389619	2010.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389620	2010.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389625	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389626	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389628	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389631	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389635	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389636	2009.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389641	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389642	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389645	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389646	2012.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX389648	2012.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KX907336	2004.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907341	2005.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907343	2004.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907346	2006.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907347	2005.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907348	2003.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907352	2002.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907364	2005.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907372	2004.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907378	2006.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907383	2004.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907389	2004.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907401	2005.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907406	2004.0				abroad		D	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907412	2005.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907414	2006.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907423	2006.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KX907431	2006.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KY275364	2016.0				abroad		G	CN				China	Asia	Asia	Eastern Asia
+KY392769	2002.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+KY496622	2015.0				abroad		A1	ES				Spain	Europe	Europe	Southern Europe
+KY658694	2008.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KY658695	2008.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KY658696	2008.0				abroad		A1	TZ				United Republic of Tanzania	Africa	Sub-Saharan Africa	Eastern Africa
+KY658701	2011.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+KY953200	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KY953201	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+KY953202	2011.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+LH107	17/9/2013	M	HT	2013-07-05 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH124	2013-10-06 00:00:00	F	HT	21/5/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH168	25/6/2013	M	MSM	2013-11-06 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH18	2013-05-09 00:00:00	M	MSM	2013-09-04 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH217	2013-02-07 00:00:00	M	MSM	25/6/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH245	24/9/2013	M	MSM	2013-09-07 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH265	17/9/2013	F	HT	2013-09-07 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH266							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
+LH31	17/9/2013	M	MSM	2013-09-04 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH316	2013-05-09 00:00:00	M	HT	16/7/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH322	2014-06-05 00:00:00	M	MSM	2013-06-08 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH339	29/10/2013	M	HT	13/8/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH353	27/8/2013	M	MSM	13/8/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH39	2013-07-05 00:00:00	M	MSM	16/4/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH396	2013-03-09 00:00:00	M	MSM	2013-03-09 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH409	2013-01-10 00:00:00	M	MSM	2013-10-09 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH41	2013-09-07 00:00:00	F	HT	16/4/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH447	21/1/2014	M	HT	2013-01-10 00:00:00	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH64	21/5/2013	M	MSM	23/4/2013	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LH742	2014-02-09 00:00:00	M	MSM	21/01/2014	La Habana	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LT28	2013-04-12 00:00:00	M	MSM	2013-12-11 00:00:00	Las Tunas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+LT35	29/01/2014	F	HT	24/12/2013	Las Tunas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+M22639	1985.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+M27323	1983.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+M62320	1985.0				abroad		A1	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+MF109427	2014.0				abroad		A1	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109532	2014.0				abroad		D	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109568	2014.0				abroad		G	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109598	2014.0				abroad		G	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109613	2014.0				abroad		A1	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109623	2014.0				abroad		A1	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109647	2013.0				abroad		G	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109677	2013.0				abroad		A1	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109689	2013.0				abroad		D	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109710	2013.0				abroad		D	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF109713	2013.0				abroad		D	GB				United Kingdom of Great Britain and Northern Ireland	Europe	Europe	Northern Europe
+MF157743	2009.0				abroad		G	ES				Spain	Europe	Europe	Southern Europe
+MF373124	1993.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+MF373167	2012.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+MF373168	2012.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+MF373180	2012.0				abroad		D	SE				Sweden	Europe	Europe	Northern Europe
+MF373181	2013.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+MF373182	2013.0				abroad		A1	SE				Sweden	Europe	Europe	Northern Europe
+MF614605	1989.0				abroad		G	RU				Russian Federation	Europe	Russia	Russia
+MF614606	2012.0				abroad		G	RU				Russian Federation	Europe	Russia	Russia
+MG197035	2013.0				abroad		B	US				United States of America	Americas	Northern America	Northern America
+MG902951	2013.0				abroad		A6	RU				Russian Federation	Europe	Russia	Russia
+MH431770	2013.0				abroad		G	CN				China	Asia	Asia	Eastern Asia
+MH705134	1987.0				abroad		G	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705143	1995.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+MH705145	2005.0				abroad		G	CM				Cameroon	Africa	Sub-Saharan Africa	Middle Africa
+MH705151	1987.0				abroad		A	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705152	1987.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705153	1987.0				abroad		A	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705155	1987.0				abroad		G	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705158	1987.0				abroad		A	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705161	1987.0				abroad		A	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MH705162	1987.0				abroad		G	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+MT40	16/10/2013	M	MSM	2013-08-10 00:00:00	Matanzas	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+MY10	22/7/2013	M	MSM	25/6/2013	Mayabeque	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+PR-29	18/10/2013	M	MSM	2013-10-01 00:00:00	Pinar del Rio	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+SC29	25/9/2013	F	HT	2013-08-05 00:00:00	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+SC41	23/10/2013	M	MSM	2013-09-07 00:00:00	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+SC70	14/2/2014	M	MSM	20/8/2013	Santiago de Cuba	naive	CRF_19	CU	CRF_19	D	True	Cuba	Cuba	Cuba	Cuba
+U88822	1984.0				abroad		D	CD				Democratic Republic of the Congo	Africa	Sub-Saharan Africa	Middle Africa
+U88824	1994.0				abroad		D	UG				Uganda	Africa	Sub-Saharan Africa	Eastern Africa
+U88826	1992.0				abroad		G	NG				Nigeria	Africa	Sub-Saharan Africa	Western Africa
+cu-231-17							D	CU		D	True	Cuba	Cuba	Cuba	Cuba
