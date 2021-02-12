@@ -19,5 +19,5 @@ and the input files for [jpHMM](http://jphmm.gobics.de/).
 * [*data/D_CRF_19/aln.first.cleaned.fa*](data/D_CRF_19/aln.first.cleaned.fa), 
 [*data/A1_CRF_19/aln.first.cleaned.fa*](data/A1_CRF_19/aln.first.cleaned.fa), 
 [*data/G_CRF_19/aln.first.cleaned.fa*](data/G_CRF_19/aln.first.cleaned.fa) contain the combined CU+LA MSAs (including 5 outgroup sequences indicated in outgroup.txt files in the corresponding folders) for the D/A1/G data sets used for these analyses (produced with [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
-* [*data/D_CRF_19/metadata.drms.tab*](data/D_CRF_19/metadata.drms.tab), [*data/D_CRF_19/metadata.drms.tab*](data/D_CRF_19/metadata.drugs.tab) contain the Surveillance DRM and ARV metadata for the D+CRF_19 sequences 
+* [*data/D_CRF_19/metadata.drms.tab*](data/D_CRF_19/metadata.drms.tab), [*data/D_CRF_19/metadata.drugs.tab*](data/D_CRF_19/metadata.drugs.tab) contain the Surveillance DRM and ARV metadata for the D+CRF_19 sequences 
 extracted with [Sierra](https://hivdb.stanford.edu/page/webservice/) (see [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
