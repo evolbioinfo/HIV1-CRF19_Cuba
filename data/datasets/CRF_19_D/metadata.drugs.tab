@@ -1,0 +1,170 @@
+mutation	drug class	drug full name	drug abbreviation	score	note	year
+PR_D30N	PI	nelfinavir	NFV	60.0	High-Level Resistance	2003
+PR_F53L	PI	nelfinavir	NFV	10.0	Potential Low-Level Resistance	2003
+PR_G48V	PI	nelfinavir	NFV	30.0	Intermediate Resistance	2003
+PR_G73C	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_G73S	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_I47V	PI	nelfinavir	NFV	20.0	Low-Level Resistance	2003
+PR_I50V	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_I54L	PI	nelfinavir	NFV	20.0	Low-Level Resistance	2003
+PR_I54M	PI	nelfinavir	NFV	20.0	Low-Level Resistance	2003
+PR_I54V	PI	nelfinavir	NFV	20.0	Low-Level Resistance	2003
+PR_I84V	PI	nelfinavir	NFV	60.0	High-Level Resistance	2003
+PR_L23I	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_L24I	PI	nelfinavir	NFV	10.0	Potential Low-Level Resistance	2003
+PR_L76V	PI	nelfinavir	NFV	10.0	Potential Low-Level Resistance	2003
+PR_L90M	PI	nelfinavir	NFV	60.0	High-Level Resistance	2003
+PR_M46I	PI	nelfinavir	NFV	30.0	Intermediate Resistance	2003
+PR_M46L	PI	nelfinavir	NFV	20.0	Low-Level Resistance	2003
+PR_N83D	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_N88D	PI	nelfinavir	NFV	60.0	High-Level Resistance	2003
+PR_N88S	PI	nelfinavir	NFV	60.0	High-Level Resistance	2003
+PR_V32I	PI	nelfinavir	NFV	15.0	Low-Level Resistance	2003
+PR_V82A	PI	nelfinavir	NFV	30.0	Intermediate Resistance	2003
+PR_V82L	PI	nelfinavir	NFV	10.0	Potential Low-Level Resistance	2003
+PR_V82T	PI	nelfinavir	NFV	30.0	Intermediate Resistance	2003
+PR_F53L	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_G48V	PI	saquinavir	SQV	60.0	High-Level Resistance	1996
+PR_G73C	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_G73S	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_I50V	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_I54L	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_I54M	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_I54V	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_I84V	PI	saquinavir	SQV	60.0	High-Level Resistance	1996
+PR_L24I	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_L90M	PI	saquinavir	SQV	45.0	Intermediate Resistance	1996
+PR_M46I	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_M46L	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_N83D	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_N88D	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_N88S	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_V82A	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_V82L	PI	saquinavir	SQV	10.0	Potential Low-Level Resistance	1996
+PR_V82T	PI	saquinavir	SQV	15.0	Low-Level Resistance	1996
+PR_G48V	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_G73C	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_G73S	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_I47V	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_I54L	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_I54M	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_I54V	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_I84V	PI	indinavir	IDV	60.0	High-Level Resistance	2001
+PR_L24I	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_L76V	PI	indinavir	IDV	30.0	Intermediate Resistance	2001
+PR_L90M	PI	indinavir	IDV	30.0	Intermediate Resistance	2001
+PR_M46I	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_M46L	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_N83D	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_N88S	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_V32I	PI	indinavir	IDV	15.0	Low-Level Resistance	2001
+PR_V82A	PI	indinavir	IDV	30.0	Intermediate Resistance	2001
+PR_V82L	PI	indinavir	IDV	10.0	Potential Low-Level Resistance	2001
+PR_V82T	PI	indinavir	IDV	30.0	Intermediate Resistance	2001
+RT_D67E	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_D67G	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_D67N	NRTI	zidovudine	AZT	15.0	Low-Level Resistance	1987
+RT_F77L	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_K219E	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_K219N	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_K219Q	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_K219R	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_K70R	NRTI	zidovudine	AZT	30.0	Intermediate Resistance	1987
+RT_L210W	NRTI	zidovudine	AZT	15.0	Low-Level Resistance	1987
+RT_M41L	NRTI	zidovudine	AZT	15.0	Low-Level Resistance	1987
+RT_T215D	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
+RT_T215E	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
+RT_T215F	NRTI	zidovudine	AZT	40.0	Intermediate Resistance	1987
+RT_T215I	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
+RT_T215S	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
+RT_T215V	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
+RT_T215Y	NRTI	zidovudine	AZT	40.0	Intermediate Resistance	1987
+RT_V75M	NRTI	zidovudine	AZT	10.0	Potential Low-Level Resistance	1987
+RT_D67E	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_D67G	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_D67N	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
+RT_F77L	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_K219E	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_K219N	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_K219Q	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_K219R	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_K65R	NRTI	stavudine	D4T	60.0	High-Level Resistance	2001
+RT_K70E	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
+RT_K70R	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
+RT_L210W	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
+RT_M41L	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
+RT_T215D	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
+RT_T215E	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
+RT_T215F	NRTI	stavudine	D4T	40.0	Intermediate Resistance	2001
+RT_T215I	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
+RT_T215S	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
+RT_T215V	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
+RT_T215Y	NRTI	stavudine	D4T	40.0	Intermediate Resistance	2001
+RT_T69D	NRTI	stavudine	D4T	10.0	Potential Low-Level Resistance	2001
+RT_V75A	NRTI	stavudine	D4T	30.0	Intermediate Resistance	2001
+RT_V75M	NRTI	stavudine	D4T	30.0	Intermediate Resistance	2001
+RT_V75T	NRTI	stavudine	D4T	60.0	High-Level Resistance	2001
+RT_F77L	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_K65R	NRTI	didanosine	DDI	60.0	High-Level Resistance	2001
+RT_K70E	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
+RT_K70R	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_L210W	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_L74I	NRTI	didanosine	DDI	60.0	High-Level Resistance	2001
+RT_L74V	NRTI	didanosine	DDI	60.0	High-Level Resistance	2001
+RT_M184I	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_M184V	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_M41L	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215D	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215E	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215F	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
+RT_T215I	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215S	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215V	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
+RT_T215Y	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
+RT_T69D	NRTI	didanosine	DDI	30.0	Intermediate Resistance	2001
+RT_V75A	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
+RT_V75M	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
+RT_V75T	NRTI	didanosine	DDI	30.0	Intermediate Resistance	2001
+RT_G190A	NNRTI	efavirenz	EFV	45.0	Intermediate Resistance	2003
+RT_G190E	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_K101E	NNRTI	efavirenz	EFV	15.0	Low-Level Resistance	2003
+RT_K101P	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_K103N	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_K103S	NNRTI	efavirenz	EFV	45.0	Intermediate Resistance	2003
+RT_L100I	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_M230L	NNRTI	efavirenz	EFV	45.0	Intermediate Resistance	2003
+RT_P225H	NNRTI	efavirenz	EFV	45.0	Intermediate Resistance	2003
+RT_V106A	NNRTI	efavirenz	EFV	45.0	Intermediate Resistance	2003
+RT_V106M	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_Y181C	NNRTI	efavirenz	EFV	30.0	Intermediate Resistance	2003
+RT_Y181I	NNRTI	efavirenz	EFV	30.0	Intermediate Resistance	2003
+RT_Y181V	NNRTI	efavirenz	EFV	30.0	Intermediate Resistance	2003
+RT_Y188L	NNRTI	efavirenz	EFV	60.0	High-Level Resistance	2003
+RT_G190A	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_G190E	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_K101E	NNRTI	nevirapine	NVP	30.0	Intermediate Resistance	2003
+RT_K101P	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_K103N	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_K103S	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_L100I	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_M230L	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_P225H	NNRTI	nevirapine	NVP	45.0	Intermediate Resistance	2003
+RT_V106A	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_V106M	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_Y181C	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_Y181I	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_Y181V	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_Y188L	NNRTI	nevirapine	NVP	60.0	High-Level Resistance	2003
+RT_K65R	NRTI	abacavir	ABC	45.0	Intermediate Resistance	2003
+RT_K70E	NRTI	abacavir	ABC	15.0	Low-Level Resistance	2003
+RT_L74I	NRTI	abacavir	ABC	30.0	Intermediate Resistance	2003
+RT_L74V	NRTI	abacavir	ABC	30.0	Intermediate Resistance	2003
+RT_M184I	NRTI	abacavir	ABC	15.0	Low-Level Resistance	2003
+RT_M184V	NRTI	abacavir	ABC	15.0	Low-Level Resistance	2003
+RT_T215F	NRTI	abacavir	ABC	10.0	Potential Low-Level Resistance	2003
+RT_T215Y	NRTI	abacavir	ABC	10.0	Potential Low-Level Resistance	2003
+RT_Y115F	NRTI	abacavir	ABC	60.0	High-Level Resistance	2003
+RT_K65R	NRTI	lamivudine	3TC	30.0	Intermediate Resistance	1996
+RT_K70E	NRTI	lamivudine	3TC	10.0	Potential Low-Level Resistance	1996
+RT_M184I	NRTI	lamivudine	3TC	60.0	High-Level Resistance	1996
+RT_M184V	NRTI	lamivudine	3TC	60.0	High-Level Resistance	1996
