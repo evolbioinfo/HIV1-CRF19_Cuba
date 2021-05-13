@@ -7,6 +7,14 @@ MAX_DATE = 2019
 
 def _get_date(d, exact_only=False):
     if pd.notnull(d):
+        try:
+            d = float(d)
+            if d == int(d):
+                return None if exact_only else d
+            return d
+        except:
+            pass
+        d = pd.to_datetime(d, infer_datetime_format=True, errors='coerce')
         first_jan_this_year = pd.datetime(year=d.year, month=1, day=1)
         day_of_this_year = d - first_jan_this_year
         first_jan_next_year = pd.datetime(year=d.year + 1, month=1, day=1)
@@ -44,13 +52,9 @@ if '__main__' == __name__:
     date_df.index = date_df.index.map(str)
     date_df = date_df.loc[[_.name for _ in tree], :]
 
-    date_df[params.date_col] = pd.to_datetime(
-        date_df[params.date_col].astype(str).str.replace('.0', '', regex=False),
-        infer_datetime_format=True, errors='coerce').map(_get_date)
+    date_df[params.date_col] = date_df[params.date_col].map(_get_date)
     if params.diag_col in date_df.columns:
-        date_df[params.diag_col] = pd.to_datetime(
-            date_df[params.diag_col].astype(str).str.replace('.0', '', regex=False),
-            infer_datetime_format=True, errors='coerce').map(_get_date)
+        date_df[params.diag_col] = date_df[params.diag_col].map(_get_date)
 
         for tip in tree:
             date = date_df.loc[tip.name, params.date_col]

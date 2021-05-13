@@ -1,0 +1,4 @@
+data set	subtype	country: CRF_19 MRCA	country: non-CRF_19 MRCA	intregion: CRF_19 MRCA	intregion: non-CRF_19 MRCA
+LA+CU	A1+CRF_19	Cuba (1.00)	Cuba (0.99)	Cuba (1.00)	Cuba (0.99)
+LA+CU	G+CRF_19	Cuba (0.99)	Cuba (0.31) or Democratic Republic of the Congo (0.51)	Cuba (0.99)	Cuba (0.32) or Middle Africa (0.59)
+LA+CU	D+CRF_19	Cuba (1.00)	Democratic Republic of the Congo (0.99)	Cuba (1.00)	Middle Africa (0.99)

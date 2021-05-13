@@ -26,12 +26,12 @@ if '__main__' == __name__:
     params = parser.parse_args()
 
     df = pd.read_csv(params.in_data, index_col=0, header=0, sep='\t')
-    df = df[df['subtype'].isin(['CRF_19', 'D', 'A1', 'G'])
+    df = df[df['subtype_consensus'].isin(['CRF_19', 'D', 'A1', 'G'])
             | (df['subtype_CRF_19_D'] == 'D')
             | (df['subtype_CRF_19_A1'] == 'A1')
             | (df['subtype_CRF_19_G'] == 'G')]
-    df['subtype'] = np.where(df['source'] == 'LA', df['subtype'],
-                             np.where(df['subtype_preannotated'] == df['subtype'], df['subtype'], None))
+    df['subtype'] = np.where(df['source'] == 'LA', df['subtype_consensus'],
+                             np.where(df['subtype_annotated'] == df['subtype_consensus'], df['subtype_consensus'], None))
     df['location'] = np.where(df['subregion'] == 'Sub-Saharan Africa', df['country'], df['subregion'])
 
     if 'sexuality' in df.columns:

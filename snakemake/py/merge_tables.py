@@ -18,7 +18,7 @@ if '__main__' == __name__:
     annotate_dates([tree], root_dates=[params.root_date])
     columns = []
     for tab in params.input_tabs:
-        tab_df = pd.read_csv(tab, sep='\t',   header=0, index_col=0)
-        columns.extend(preannotate_forest(tab_df, [tree]))
+        tab_df = pd.read_csv(tab, sep='\t', header=0, index_col=0)
+        columns.extend(preannotate_forest(df=tab_df, forest=[tree])[0])
     _serialize_predicted_states(columns, params.output_tab, [tree])
 

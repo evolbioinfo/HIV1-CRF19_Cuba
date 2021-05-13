@@ -73,7 +73,6 @@ RT_K70R	NRTI	zidovudine	AZT	30.0	Intermediate Resistance	1987
 RT_L210W	NRTI	zidovudine	AZT	15.0	Low-Level Resistance	1987
 RT_M41L	NRTI	zidovudine	AZT	15.0	Low-Level Resistance	1987
 RT_T215D	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
-RT_T215E	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
 RT_T215F	NRTI	zidovudine	AZT	40.0	Intermediate Resistance	1987
 RT_T215I	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
 RT_T215S	NRTI	zidovudine	AZT	20.0	Low-Level Resistance	1987
@@ -94,7 +93,6 @@ RT_K70R	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
 RT_L210W	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
 RT_M41L	NRTI	stavudine	D4T	15.0	Low-Level Resistance	2001
 RT_T215D	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
-RT_T215E	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
 RT_T215F	NRTI	stavudine	D4T	40.0	Intermediate Resistance	2001
 RT_T215I	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
 RT_T215S	NRTI	stavudine	D4T	20.0	Low-Level Resistance	2001
@@ -115,7 +113,6 @@ RT_M184I	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
 RT_M184V	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
 RT_M41L	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
 RT_T215D	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
-RT_T215E	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
 RT_T215F	NRTI	didanosine	DDI	15.0	Low-Level Resistance	2001
 RT_T215I	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001
 RT_T215S	NRTI	didanosine	DDI	10.0	Potential Low-Level Resistance	2001

@@ -1,30 +1,32 @@
 import os
 # To run locally:
-# snakemake --snakefile Snakefile_trees --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+# snakemake --snakefile Snakefile_trees --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
 
 # To visualise the pipeline:
-# snakemake --snakefile Snakefile_trees --dag --config folder='..' | dot -Tsvg > pipeline_trees.svg
+# snakemake --snakefile Snakefile_trees --dag | dot -Tsvg > pipeline_trees.svg
 
 localrules: all
 ruleorder: cut > nex2nwk > date_lsd2 > root > raxml
 
-folder = os.path.abspath(config["folder"])
-data_dir = os.path.join(folder, 'data')
+folder = os.path.abspath(config.get("folder", '..'))
+data_dir = os.path.join(folder, 'data', 'datasets')
 subtypes = ['A1', 'G', 'D']
+
+os.makedirs('logs', exist_ok=True)
 
 rule all:
     input:
-        expand(os.path.join(data_dir, 'datasets', '{subtype}_CRF_19', 'timetree.nwk'), subtype=subtypes)
+        expand(os.path.join(data_dir, '{subtype}_CRF_19', 'timetree.nwk'), subtype=subtypes)
 
 rule raxml:
     '''
     Reconstructs a tree with RAxML.
     '''
     input:
-        aln = os.path.join(data_dir, 'datasets', '{subtype}', 'aln.first.cleaned.fa')
+        aln = os.path.join(data_dir, '{subtype}', 'aln.first.cleaned.fa')
     output:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.nwk'),
-        log = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.log'),
+        tree = os.path.join(data_dir, '{subtype}', 'tree.nwk'),
+        log = os.path.join(data_dir, '{subtype}', 'tree.log'),
     threads: 12
     singularity: "docker://evolbioinfo/raxml-ng:v0.9.0"
     params:
@@ -53,10 +55,10 @@ rule root:
     Roots a tree with an outgroup.
     '''
     input:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'tree.nwk'),
-        outgroup = os.path.join(data_dir, 'datasets', '{subtype}', 'outgroup.txt'),
+        tree = os.path.join(data_dir, '{subtype}', 'tree.nwk'),
+        outgroup = os.path.join(data_dir, '{subtype}', 'outgroup.txt'),
     output:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
+        tree = os.path.join(data_dir, '{subtype}', 'rooted_tree.nwk'),
     singularity:
         "docker://evolbioinfo/gotree:v0.3.0b"
     params:
@@ -74,10 +76,10 @@ rule extract_dates_lsd2:
     Reformats metadata into date file readable by LSD.
     '''
     input:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
-        tab = os.path.join(data_dir, 'datasets', 'metadata.tab'),
+        tree = os.path.join(data_dir, '{subtype}', 'rooted_tree.nwk'),
+        tab = os.path.join(data_dir, 'metadata.tab'),
     output:
-        tab = os.path.join(data_dir, 'datasets', '{subtype}', 'lsd2.dates'),
+        tab = os.path.join(data_dir, '{subtype}', 'lsd2.dates'),
     params:
         mem = 1000,
         name = 'lsd2_dates_{subtype}',
@@ -95,9 +97,9 @@ rule aln_length:
     Calculates alignment length.
     '''
     input:
-        aln = os.path.join(data_dir, 'datasets', '{subtype}', '{aln}.fa'),
+        aln = os.path.join(data_dir, '{subtype}', '{aln}.fa'),
     output:
-        length = os.path.join(data_dir, 'datasets', '{subtype}', '{aln}.length'),
+        length = os.path.join(data_dir, '{subtype}', '{aln}.length'),
     singularity:
         "docker://evolbioinfo/goalign:v0.3.1"
     params:
@@ -115,19 +117,19 @@ rule date_lsd2:
     Dates a tree.
     '''
     input:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'rooted_tree.nwk'),
-        length = os.path.join(data_dir, 'datasets', '{subtype}', 'aln.first.cleaned.length'),
-        dates = os.path.join(data_dir, 'datasets', '{subtype}', 'lsd2.dates'),
+        tree = os.path.join(data_dir, '{subtype}', 'rooted_tree.nwk'),
+        length = os.path.join(data_dir, '{subtype}', 'aln.first.cleaned.length'),
+        dates = os.path.join(data_dir, '{subtype}', 'lsd2.dates'),
     output:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.nexus'),
-        log = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.log'),
-        rd = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.rootdate'),
+        tree = os.path.join(data_dir, '{subtype}', 'timetree.nexus'),
+        log = os.path.join(data_dir, '{subtype}', 'timetree.log'),
+        rd = os.path.join(data_dir, '{subtype}', 'timetree.rootdate'),
     threads: 1
     singularity: "docker://evolbioinfo/lsd2:v1.4.2.2"
     params:
         mem = 4000,
         name = 'lsd2_{subtype}',
-        wd = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.wd'),
+        wd = os.path.join(data_dir, '{subtype}', 'timetree.wd'),
         qos = 'fast'
     shell:
         """
@@ -137,6 +139,7 @@ rule date_lsd2:
 
         mv "{params.wd}.date.nexus" "{output.tree}"
         rm "{params.wd}"
+        rm "{params.wd}.nwk"
         rm "{params.wd}.nexus"
 
 
@@ -149,9 +152,9 @@ rule nex2nwk:
     Converts a nexus tree to newick.
     '''
     input:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', '{tree}.nexus'),
+        tree = os.path.join(data_dir, '{subtype}', '{tree}.nexus'),
     output:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', '{tree}.nwk'),
+        tree = os.path.join(data_dir, '{subtype}', '{tree}.nwk'),
     singularity:
         "docker://evolbioinfo/gotree:v0.3.0b"
     params:
@@ -170,10 +173,10 @@ rule cut:
     Cuts tree branches at diagnostic.
     '''
     input:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.nwk'),
-        data = os.path.join(data_dir, 'datasets', 'metadata.tab')
+        tree = os.path.join(data_dir, '{subtype}', 'timetree.nwk'),
+        data = os.path.join(data_dir, 'metadata.tab')
     output:
-        tree = os.path.join(data_dir, 'datasets', '{subtype}', 'timetree.cut.nwk'),
+        tree = os.path.join(data_dir, '{subtype}', 'timetree.cut.nwk'),
     threads: 1
     params:
         mem = 500,
