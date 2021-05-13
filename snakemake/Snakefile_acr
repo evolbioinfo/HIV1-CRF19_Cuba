@@ -1,7 +1,7 @@
 import os
 
-# To run locally:
-# snakemake --snakefile Snakefile_acr --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+# To run locally replace <your_itol_id> with yout iTOL API key as itol_id and replace CRF19  with a project name that exists in your iTOL space:
+# snakemake --snakefile Snakefile_acr --config itol_id=<your_itol_id> itol_proj=CRF19 --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
 
 # To visualise the pipeline:
 # snakemake --snakefile Snakefile_acr --dag | dot -Tsvg > pipeline_acr.svg
@@ -10,6 +10,8 @@ localrules: all, itol_CRF_19, pastml_all
 ruleorder: pastml_vis > pastml_drm > pastml_col
 
 folder = os.path.abspath(config.get("folder", '..'))
+itol_id = config.get('itol_id', None)
+itol_proj = config.get('itol_proj', "CRF19")
 data_dir = os.path.join(folder, 'data', 'datasets')
 
 # SDRMs to be analysed: all with prevalence > 10%
@@ -26,6 +28,7 @@ rule all:
         acrs = expand(os.path.join(data_dir, '{subtype}_CRF_19', 'acr', 'map.{col}.{subtype}_CRF_19.html'), col=locs, subtype=subtypes),
         acrs_crf_19 = expand(os.path.join(data_dir, 'CRF_19_D', 'acr', 'map.{col}.CRF_19_D.html'), col=cuban_columns + DRMs),
         ids = expand(os.path.join(data_dir, 'CRF_19_{subtype}', 'ids_CRF_19.tab'), subtype=subtypes),
+        # For the trees to be uploaded to iTOL you need to specify your iTOL id and (existing) iTOL project name in the config
         itol = expand(os.path.join(data_dir, '{subtype}_CRF_19', 'pastml', 'all', 'iTOL_url.txt'), subtype=subtypes),
         itol_crf_19 = os.path.join(data_dir, 'CRF_19_D', 'pastml', 'all', 'iTOL_url.txt'),
 
@@ -289,7 +292,7 @@ rule pastml_all:
 
         pastml --tree {input.tree} --data {input.data} -v --work_dir "{params.wd}" \
         --columns {locs} subtype source --root_date $date --parameters {input.params} \
-        --upload_to_itol --itol_id ZxuhG2okfKLQnsgd5xAEGQ --itol_project CRF19 \
+        --upload_to_itol --itol_id {itol_id} --itol_project {itol_proj} \
         --itol_tree_name "{wildcards.subtype}"
         """
 
@@ -316,6 +319,6 @@ rule itol_CRF_19:
 
         pastml --tree {input.tree} --data {input.data} -v --work_dir "{params.wd}" --root_date $date \
         --prediction_method COPY \
-        --upload_to_itol --itol_id ZxuhG2okfKLQnsgd5xAEGQ --itol_project CRF19 \
+        --upload_to_itol --itol_id {itol_id} --itol_project {itol_proj} \
         --itol_tree_name "CRF_19"
         """

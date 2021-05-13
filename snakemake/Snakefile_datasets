@@ -1,14 +1,14 @@
 import os
 
 # To run locally:
-# snakemake --snakefile Snakefile_datasets --config folder='..' --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
+# snakemake --snakefile Snakefile_datasets --keep-going --cores 4 --use-singularity --singularity-prefix ~/.singularity --singularity-args "--home ~"
 
 # To visualise the pipeline:
-# snakemake --snakefile Snakefile_datasets --dag --config folder='..' | dot -Tsvg > pipeline_datasets.svg
+# snakemake --snakefile Snakefile_datasets --dag | dot -Tsvg > pipeline_datasets.svg
 
 localrules: all
 
-folder = os.path.abspath(config["folder"])
+folder = os.path.abspath(config.get("folder", '..'))
 data_dir = os.path.join(folder, 'data')
 subtypes = ['A1', 'G', 'D']
 
