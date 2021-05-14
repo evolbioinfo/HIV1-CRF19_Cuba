@@ -63,4 +63,4 @@ extracted with [Sierra](https://hivdb.stanford.edu/page/webservice/) (see [*Snak
 
 
 ### BEAST
-* [*data/datasets/CRF_19_D/beast*](data/datasets/CRF_19_D/beast) contains the [BEAST](https://beast.community/index.html) configuration for temporal and [discrete state diffusion](https://beast.community/workshop_discrete_diffusion) analysis of the CRF19 cluster.
+* [*data/datasets/CRF_19_D/beast*](data/datasets/CRF_19_D/beast) contains the [BEAST](https://beast.community/index.html) configuration for temporal and [discrete state diffusion](https://beast.community/workshop_discrete_diffusion) analysis of the CRF19 cluster, and the MCC tree.
