@@ -1,5 +1,9 @@
 # HIV1-CRF19_Cuba
-Phylogenetic analyses of CRF19 spread in Cuba and worldwide
+Phylogenetic analyses of CRF19 spread in Cuba and worldwide.
+
+## Citation
+Zhukova A, Voznica J, Dávila Felipe M, To T-H, Pérez L, Martı́nez Y, et al. (2021) Cuban history of CRF19 recombinant subtype of HIV-1.
+_PLoS Pathog_ 17(8): e1009786. [doi:10.1371/journal.ppat.1009786](https://doi.org/10.1371/journal.ppat.1009786)
 
 ## Analysis pipelines
 
