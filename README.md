@@ -48,6 +48,7 @@ It contains the following columns:
 	* *subtype\_CRF\_19\_D* -- whether the sequence is compatible with CRF19 in its D part according to jpHMM: D if yes, empty otherwise;
 	* *subtype\_CRF\_19\_G* -- whether the sequence is compatible with CRF19 in its G part according to jpHMM: G if yes, empty otherwise;
 	* *subtype\_CRF\_19\_A1* -- whether the sequence is compatible with CRF19 in its A1 part according to jpHMM: A1 if yes, empty otherwise.
+* [*data/datasets/iTOL_colorstrip-subtype.txt] contains an [iTOL](https://itol.embl.de/)-compatible colourstrip representing HIV-1 subtype detected by the phylogenetic trees in this study;
 * [*data/datasets/D_CRF_19/metadata.drms.tab*](data/datasets/D_CRF_19/metadata.drms.tab), [*data/datasets/D_CRF_19/metadata.drugs.tab*](data/datasets/D_CRF_19/metadata.drugs.tab) contain the Surveillance DRM and ARV metadata for the D+CRF_19 sequences 
 extracted with [Sierra](https://hivdb.stanford.edu/page/webservice/) (see [*Snakefile_datasets*](snakemake/Snakefile_datasets) pipeline).
 * [*data/datasets/D_CRF_19/lsd2.dates*](data/datasets/D_CRF_19/lsd2.dates), 
