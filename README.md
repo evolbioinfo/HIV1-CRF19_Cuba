@@ -13,7 +13,7 @@ for reconstruction of evolutionary history of HIV-1 in Cuba:
 ![pipeline visualisation](snakemake/pipeline_datasets.svg)
 * [*Snakefile_trees*](snakemake/Snakefile_trees) for phylogenetic tree reconstruction, rooting and dating
 ![pipeline visualisation](snakemake/pipeline_trees.svg)
-* [*Snakefile_trees*](snakemake/Snakefile_acr) for phylogeographic, drug resistance and transmission mode analyses
+* [*Snakefile_acr*](snakemake/Snakefile_acr) for phylogeographic, drug resistance and transmission mode analyses
 ![pipeline visualisation](snakemake/pipeline_acr.svg)
 
 ## Data
